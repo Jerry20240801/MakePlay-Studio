@@ -1,0 +1,203 @@
+{
+  "packId": "puzzle",
+  "status": "passed",
+  "recipeHash": "5ac292b231be5a5c659cca19d07e1fd400e584b7595f9fe5ee72a0aecda8e08d",
+  "contractHash": "b8872444c3c2bab83b99eb0e729d101ec82809e21f455eae46ff908ac5b427f2",
+  "buildId": "3d501cde23cf11fb10d913f22a13858c34776e2cb2a47d0bbc370b31f21e775c",
+  "verificationId": "bcee7885e55f9157deaa490628274b2e66ba1261a5c19702fd784ffd89da6d14",
+  "engineVersion": "0.1.0",
+  "schemaVersion": 1,
+  "checks": [
+    {
+      "id": "structure",
+      "title": "Schema 与配方语义",
+      "kind": "auto",
+      "status": "passed",
+      "detail": "字段、上限、引用与结构检查通过"
+    },
+    {
+      "id": "determinism",
+      "title": "纯函数确定性",
+      "kind": "auto",
+      "status": "passed",
+      "detail": "相同配方与动作产生相同结果，输入状态未被修改"
+    },
+    {
+      "id": "initial_state",
+      "title": "初始状态合法性",
+      "kind": "auto",
+      "status": "passed",
+      "detail": "初始状态可玩"
+    },
+    {
+      "id": "reachable_goal",
+      "title": "通关路线搜索",
+      "kind": "auto",
+      "status": "passed",
+      "detail": "找到 19 步路线（141 个状态）"
+    }
+  ],
+  "contracts": [],
+  "search": {
+    "status": "found",
+    "actions": [
+      {
+        "type": "move",
+        "direction": "right"
+      },
+      {
+        "type": "move",
+        "direction": "right"
+      },
+      {
+        "type": "move",
+        "direction": "down"
+      },
+      {
+        "type": "move",
+        "direction": "down"
+      },
+      {
+        "type": "move",
+        "direction": "up"
+      },
+      {
+        "type": "move",
+        "direction": "up"
+      },
+      {
+        "type": "move",
+        "direction": "left"
+      },
+      {
+        "type": "move",
+        "direction": "left"
+      },
+      {
+        "type": "move",
+        "direction": "down"
+      },
+      {
+        "type": "move",
+        "direction": "down"
+      },
+      {
+        "type": "move",
+        "direction": "down"
+      },
+      {
+        "type": "move",
+        "direction": "down"
+      },
+      {
+        "type": "move",
+        "direction": "down"
+      },
+      {
+        "type": "move",
+        "direction": "right"
+      },
+      {
+        "type": "move",
+        "direction": "right"
+      },
+      {
+        "type": "move",
+        "direction": "right"
+      },
+      {
+        "type": "interact"
+      },
+      {
+        "type": "move",
+        "direction": "right"
+      },
+      {
+        "type": "move",
+        "direction": "right"
+      }
+    ],
+    "statesVisited": 141,
+    "depth": 19,
+    "elapsedMs": 7
+  },
+  "replay": [
+    {
+      "type": "move",
+      "direction": "right"
+    },
+    {
+      "type": "move",
+      "direction": "right"
+    },
+    {
+      "type": "move",
+      "direction": "down"
+    },
+    {
+      "type": "move",
+      "direction": "down"
+    },
+    {
+      "type": "move",
+      "direction": "up"
+    },
+    {
+      "type": "move",
+      "direction": "up"
+    },
+    {
+      "type": "move",
+      "direction": "left"
+    },
+    {
+      "type": "move",
+      "direction": "left"
+    },
+    {
+      "type": "move",
+      "direction": "down"
+    },
+    {
+      "type": "move",
+      "direction": "down"
+    },
+    {
+      "type": "move",
+      "direction": "down"
+    },
+    {
+      "type": "move",
+      "direction": "down"
+    },
+    {
+      "type": "move",
+      "direction": "down"
+    },
+    {
+      "type": "move",
+      "direction": "right"
+    },
+    {
+      "type": "move",
+      "direction": "right"
+    },
+    {
+      "type": "move",
+      "direction": "right"
+    },
+    {
+      "type": "interact"
+    },
+    {
+      "type": "move",
+      "direction": "right"
+    },
+    {
+      "type": "move",
+      "direction": "right"
+    }
+  ],
+  "errors": [],
+  "createdAt": "2026-11-13T09:53:39.191Z"
+}

@@ -1,0 +1,296 @@
+{
+  "schemaVersion": 1,
+  "pack": {
+    "id": "card",
+    "version": 1
+  },
+  "meta": {
+    "name": "熔炉连战",
+    "description": "比熔炉决斗更长的五场连续战斗：12 种卡牌、50 点生命、每回合 3 点能量，每场胜利后从 3 张奖励里挑 1 张。固定种子可复现。",
+    "controls": "点击手牌出牌，点击结束回合"
+  },
+  "cards": [
+    {
+      "id": "strike",
+      "name": "打击",
+      "cost": 1,
+      "rarity": "starter",
+      "effects": [
+        {
+          "kind": "damage",
+          "amount": 6
+        }
+      ],
+      "description": "造成 6 点伤害"
+    },
+    {
+      "id": "defend",
+      "name": "防御",
+      "cost": 1,
+      "rarity": "starter",
+      "effects": [
+        {
+          "kind": "block",
+          "amount": 5
+        }
+      ],
+      "description": "获得 5 点格挡"
+    },
+    {
+      "id": "jab",
+      "name": "刺击",
+      "cost": 0,
+      "rarity": "common",
+      "effects": [
+        {
+          "kind": "damage",
+          "amount": 3
+        }
+      ],
+      "description": "造成 3 点伤害"
+    },
+    {
+      "id": "focus",
+      "name": "专注",
+      "cost": 1,
+      "rarity": "common",
+      "effects": [
+        {
+          "kind": "gain_strength",
+          "amount": 1
+        }
+      ],
+      "description": "获得 1 点力量"
+    },
+    {
+      "id": "insight",
+      "name": "洞察",
+      "cost": 1,
+      "rarity": "common",
+      "effects": [
+        {
+          "kind": "draw",
+          "amount": 1
+        }
+      ],
+      "description": "抽 1 张牌"
+    },
+    {
+      "id": "charge",
+      "name": "冲锋",
+      "cost": 2,
+      "rarity": "common",
+      "effects": [
+        {
+          "kind": "damage",
+          "amount": 12
+        }
+      ],
+      "description": "造成 12 点伤害"
+    },
+    {
+      "id": "wall",
+      "name": "铁壁",
+      "cost": 2,
+      "rarity": "common",
+      "effects": [
+        {
+          "kind": "block",
+          "amount": 12
+        }
+      ],
+      "description": "获得 12 点格挡"
+    },
+    {
+      "id": "hex",
+      "name": "虚弱咒",
+      "cost": 1,
+      "rarity": "rare",
+      "effects": [
+        {
+          "kind": "apply_weak",
+          "amount": 2
+        }
+      ],
+      "description": "敌方伤害降低 2 回合"
+    },
+    {
+      "id": "shatter",
+      "name": "破甲",
+      "cost": 1,
+      "rarity": "rare",
+      "effects": [
+        {
+          "kind": "apply_vulnerable",
+          "amount": 2
+        }
+      ],
+      "description": "敌方受到伤害提高 2 回合"
+    },
+    {
+      "id": "twin",
+      "name": "连刺",
+      "cost": 1,
+      "rarity": "common",
+      "effects": [
+        {
+          "kind": "damage",
+          "amount": 4
+        },
+        {
+          "kind": "draw",
+          "amount": 1
+        }
+      ],
+      "description": "造成 4 点伤害并抽 1 张"
+    },
+    {
+      "id": "guard",
+      "name": "护势",
+      "cost": 1,
+      "rarity": "common",
+      "effects": [
+        {
+          "kind": "block",
+          "amount": 6
+        },
+        {
+          "kind": "retain"
+        }
+      ],
+      "description": "获得 6 点格挡，保留"
+    },
+    {
+      "id": "breath",
+      "name": "换气",
+      "cost": 0,
+      "rarity": "rare",
+      "effects": [
+        {
+          "kind": "gain_energy",
+          "amount": 1
+        },
+        {
+          "kind": "exhaust"
+        }
+      ],
+      "description": "获得 1 点能量后消耗"
+    }
+  ],
+  "deck": [
+    "strike",
+    "strike",
+    "strike",
+    "defend",
+    "defend",
+    "defend",
+    "jab",
+    "jab",
+    "focus",
+    "insight"
+  ],
+  "enemies": [
+    {
+      "id": "slime",
+      "name": "史莱姆",
+      "hp": 14,
+      "intents": [
+        {
+          "kind": "attack",
+          "amount": 5
+        },
+        {
+          "kind": "block",
+          "amount": 3
+        }
+      ]
+    },
+    {
+      "id": "bat",
+      "name": "洞蝠",
+      "hp": 18,
+      "intents": [
+        {
+          "kind": "attack",
+          "amount": 6
+        },
+        {
+          "kind": "attack",
+          "amount": 4
+        }
+      ]
+    },
+    {
+      "id": "golem",
+      "name": "泥偶",
+      "hp": 22,
+      "intents": [
+        {
+          "kind": "block",
+          "amount": 8
+        },
+        {
+          "kind": "attack",
+          "amount": 7
+        }
+      ]
+    },
+    {
+      "id": "sentinel",
+      "name": "熔炉哨卫",
+      "hp": 26,
+      "intents": [
+        {
+          "kind": "attack",
+          "amount": 7
+        },
+        {
+          "kind": "block",
+          "amount": 10
+        }
+      ]
+    },
+    {
+      "id": "core",
+      "name": "炉心",
+      "hp": 30,
+      "intents": [
+        {
+          "kind": "attack",
+          "amount": 9
+        },
+        {
+          "kind": "attack",
+          "amount": 7
+        },
+        {
+          "kind": "block",
+          "amount": 12
+        }
+      ]
+    }
+  ],
+  "run": {
+    "battles": 5,
+    "startingHp": 50,
+    "energyPerTurn": 3,
+    "seed": 20261114,
+    "rewardChoices": 3
+  },
+  "presentation": {
+    "theme": {
+      "background": "#1c1917",
+      "floor": "#292524",
+      "wall": "#57534e",
+      "accent": "#f59e0b",
+      "text": "#fafaf9"
+    },
+    "cellSize": 48,
+    "sounds": true,
+    "assets": []
+  },
+  "generation": {
+    "method": "handwritten",
+    "note": "加长样例，五场战斗"
+  }
+}

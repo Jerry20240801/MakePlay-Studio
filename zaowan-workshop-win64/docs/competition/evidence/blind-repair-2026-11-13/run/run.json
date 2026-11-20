@@ -1,0 +1,37 @@
+{
+  "id": "run-3ca48f62",
+  "projectId": "6b7f15be-daff-493d-8afd-8c2ac80a155d",
+  "instruction": "这关通关不了，帮我修好。门和胜利条件不要改。",
+  "mode": "model",
+  "kind": "modify",
+  "threadId": "thread-44c11535",
+  "parentRunId": null,
+  "issueId": null,
+  "status": "ready_for_review",
+  "createdAt": "2026-11-13T15:18:22.253Z",
+  "updatedAt": "2026-11-13T15:20:20.422Z",
+  "baseVersionId": "v2",
+  "candidateVersionId": "v3",
+  "modelResponses": 8,
+  "toolCalls": 8,
+  "repairs": 0,
+  "guidanceCount": 0,
+  "concerns": {},
+  "feedbackFixes": [
+    {
+      "failedCheckIds": [
+        "reachable_goal",
+        "contract:c-reach"
+      ],
+      "resolvedCheckIds": [
+        "reachable_goal",
+        "contract:c-reach"
+      ],
+      "attempt": 1,
+      "candidateVersionId": "v3"
+    }
+  ],
+  "error": null,
+  "demo": false,
+  "interrupted": false
+}

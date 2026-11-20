@@ -1,0 +1,31 @@
+{
+  "contractVersion": 1,
+  "entries": [
+    {
+      "id": "c-answer-1",
+      "kind": "quiz_answer_key_locked",
+      "description": "第 1 题的选项与答案键不能被自动修复修改",
+      "origin": "sample",
+      "pack": [
+        "quiz"
+      ],
+      "verificationMode": "auto",
+      "params": {
+        "questionId": "q-01"
+      }
+    },
+    {
+      "id": "c-answer-2",
+      "kind": "quiz_answer_key_locked",
+      "description": "第 26 题的填空答案键不能被自动修复修改",
+      "origin": "sample",
+      "pack": [
+        "quiz"
+      ],
+      "verificationMode": "auto",
+      "params": {
+        "questionId": "q-26"
+      }
+    }
+  ]
+}

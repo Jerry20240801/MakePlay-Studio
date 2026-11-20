@@ -1,0 +1,49 @@
+{
+  "contractVersion": 1,
+  "entries": [
+    {
+      "id": "c-door-1",
+      "kind": "door_requires_item",
+      "description": "外库门必须用 1 把钥匙打开",
+      "origin": "sample",
+      "pack": [
+        "puzzle"
+      ],
+      "verificationMode": "auto",
+      "params": {
+        "doorId": "door-1",
+        "itemType": "key",
+        "count": 1
+      }
+    },
+    {
+      "id": "c-door-2",
+      "kind": "door_requires_item",
+      "description": "内库门必须用 2 把钥匙打开",
+      "origin": "sample",
+      "pack": [
+        "puzzle"
+      ],
+      "verificationMode": "auto",
+      "params": {
+        "doorId": "door-2",
+        "itemType": "key",
+        "count": 2
+      }
+    },
+    {
+      "id": "c-goal",
+      "kind": "goal_requires_collection",
+      "description": "胜利必须收过 2 把钥匙并抵达出口",
+      "origin": "sample",
+      "pack": [
+        "puzzle"
+      ],
+      "verificationMode": "auto",
+      "params": {
+        "itemType": "key",
+        "count": 2
+      }
+    }
+  ]
+}

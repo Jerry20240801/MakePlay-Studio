@@ -1,0 +1,120 @@
+{
+  "id": "006f88ef-a8ed-4bfd-85ad-c05ccb3614da",
+  "name": "真实模型 Issue 修复",
+  "packId": "puzzle",
+  "createdAt": "2026-11-13T09:56:15.138Z",
+  "updatedAt": "2026-11-13T09:56:28.445Z",
+  "currentVersionId": "v3",
+  "adoptedVersionId": "v1",
+  "lastVerifiedVersionId": "v3",
+  "versions": [
+    {
+      "id": "v1",
+      "createdAt": "2026-11-13T09:56:15.138Z",
+      "note": "初始骨架",
+      "source": "user",
+      "buildId": "30a359728a038e8d0a7d8553bdd3d3fce28e2fcf16ab9c6d7f754553396e7f3b",
+      "recipeHash": "6b82152942902e7d4655022c950df688fc8393fd65eea32db47dc5e64c0099ee",
+      "status": "stable",
+      "parentId": null,
+      "verified": null
+    },
+    {
+      "id": "v2",
+      "createdAt": "2026-11-13T09:56:15.150Z",
+      "note": "回归夹具：钥匙在门后",
+      "source": "user",
+      "buildId": "9a1ba25c9deca5d046f9d1e0a066dbd02a2d8a2577c6c4b4078681b5b6744451",
+      "recipeHash": "03e164de6a1db377df6ae1937484be727adfd96f3a767e45f1394a5deba6affa",
+      "status": "candidate",
+      "parentId": "v1",
+      "verified": {
+        "status": "failed",
+        "verificationId": "44ac8e235e46d3b4f3f661fca8b0ae221cdb5c9b92b15b6ad04d8adb3344ac58",
+        "at": "2026-11-13T09:56:15.199Z"
+      }
+    },
+    {
+      "id": "v3",
+      "createdAt": "2026-11-13T09:56:22.307Z",
+      "note": "修复 issue-6adc53e1：钥匙 key-1 移到出生点右侧 (2,1)，使 c-reach 可通关；保留 door-1 与胜利条件",
+      "source": "agent",
+      "buildId": "8528d8988197e1b13025cc15ec9e1493551543e53f6d85362553f5909068f474",
+      "recipeHash": "f46a8b43c2a8eee5f41bbf5c6e0efd1c48440a1813ad0383195592dfeff304c0",
+      "status": "candidate",
+      "parentId": "v2",
+      "verified": {
+        "status": "passed",
+        "verificationId": "9ab2f810ad0c4ecb8cfd3ce7cf3b4d5aa3d48dbba2ff50c7b080f60fbb843286",
+        "at": "2026-11-13T09:56:28.445Z"
+      }
+    }
+  ],
+  "contracts": {
+    "contractVersion": 1,
+    "id": "contracts-006f88ef-a8ed-4bfd-85ad-c05ccb3614da-mwesxqyh",
+    "projectId": "006f88ef-a8ed-4bfd-85ad-c05ccb3614da",
+    "entries": [
+      {
+        "id": "c-door",
+        "kind": "door_requires_item",
+        "description": "卷帘门必须用 1 把黄铜钥匙打开",
+        "origin": "sample",
+        "pack": [
+          "puzzle"
+        ],
+        "verificationMode": "auto",
+        "params": {
+          "doorId": "door-1",
+          "itemType": "key",
+          "count": 1
+        }
+      },
+      {
+        "id": "c-exists",
+        "kind": "required_entity_exists",
+        "description": "卷帘门不能被删除",
+        "origin": "sample",
+        "pack": [
+          "puzzle"
+        ],
+        "verificationMode": "auto",
+        "params": {
+          "entityId": "door-1",
+          "entityKind": "door"
+        }
+      },
+      {
+        "id": "c-goal",
+        "kind": "goal_requires_collection",
+        "description": "胜利必须要求收集钥匙",
+        "origin": "sample",
+        "pack": [
+          "puzzle"
+        ],
+        "verificationMode": "auto",
+        "params": {
+          "itemType": "key",
+          "count": 1
+        }
+      },
+      {
+        "id": "c-reach",
+        "kind": "reachable_goal",
+        "description": "必须存在真实可通关路线",
+        "origin": "sample",
+        "pack": [
+          "puzzle"
+        ],
+        "verificationMode": "auto",
+        "params": {
+          "maxStates": 50000,
+          "maxSteps": 600
+        }
+      }
+    ],
+    "createdAt": "2026-11-13T09:56:15.138Z",
+    "confirmedAt": "2026-11-13T09:56:15.161Z"
+  },
+  "sample": null
+}

@@ -1,0 +1,23 @@
+{
+  "id": "run-e4e4a9bc",
+  "projectId": "006f88ef-a8ed-4bfd-85ad-c05ccb3614da",
+  "instruction": "这个游戏拿不到钥匙。只修这一处：把钥匙 key-1 移到玩家出生点右侧的格子 (2,1)，不要删除门 door-1，不要修改胜利条件。",
+  "mode": "model",
+  "kind": "repair",
+  "threadId": "thread-a7e56c66",
+  "parentRunId": null,
+  "issueId": "issue-6adc53e1",
+  "status": "ready_for_review",
+  "createdAt": "2026-11-13T09:56:15.215Z",
+  "updatedAt": "2026-11-13T09:56:29.866Z",
+  "baseVersionId": "v2",
+  "candidateVersionId": "v3",
+  "modelResponses": 6,
+  "toolCalls": 6,
+  "repairs": 0,
+  "guidanceCount": 0,
+  "concerns": {},
+  "error": null,
+  "demo": false,
+  "interrupted": false
+}

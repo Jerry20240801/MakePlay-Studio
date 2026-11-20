@@ -1,0 +1,64 @@
+{
+  "contractVersion": 1,
+  "entries": [
+    {
+      "id": "c-switch-gate",
+      "kind": "preserve_mechanic",
+      "description": "开关必须仍然控制机关门的开启",
+      "origin": "sample",
+      "pack": [
+        "puzzle"
+      ],
+      "verificationMode": "auto",
+      "params": {
+        "mechanic": "switch_gate_link",
+        "switchId": "switch-1",
+        "flagId": "gateOpen",
+        "gateId": "gate-1",
+        "openValue": true
+      }
+    },
+    {
+      "id": "c-gate-exists",
+      "kind": "required_entity_exists",
+      "description": "机关门不能被删除",
+      "origin": "sample",
+      "pack": [
+        "puzzle"
+      ],
+      "verificationMode": "auto",
+      "params": {
+        "entityId": "gate-1",
+        "entityKind": "gate"
+      }
+    },
+    {
+      "id": "c-goal-gem",
+      "kind": "goal_requires_collection",
+      "description": "胜利必须要求收集晶体",
+      "origin": "sample",
+      "pack": [
+        "puzzle"
+      ],
+      "verificationMode": "auto",
+      "params": {
+        "itemType": "gem",
+        "count": 1
+      }
+    },
+    {
+      "id": "c-reach",
+      "kind": "reachable_goal",
+      "description": "必须存在真实可通关路线",
+      "origin": "sample",
+      "pack": [
+        "puzzle"
+      ],
+      "verificationMode": "auto",
+      "params": {
+        "maxStates": 50000,
+        "maxSteps": 600
+      }
+    }
+  ]
+}

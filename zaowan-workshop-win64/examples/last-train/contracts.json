@@ -1,0 +1,56 @@
+{
+  "contractVersion": 1,
+  "entries": [
+    {
+      "id": "c-ending",
+      "kind": "ending_locked",
+      "description": "结局“留在站台”的标题与条件不能被自动改动",
+      "origin": "sample",
+      "pack": [
+        "dialogue"
+      ],
+      "verificationMode": "auto",
+      "params": {
+        "endingId": "ending-stay"
+      }
+    },
+    {
+      "id": "c-choice",
+      "kind": "choice_effect_locked",
+      "description": "“我在下一站下车”的标记与去向固定",
+      "origin": "sample",
+      "pack": [
+        "dialogue"
+      ],
+      "verificationMode": "auto",
+      "params": {
+        "nodeId": "n-car",
+        "choiceId": "c-leave"
+      }
+    },
+    {
+      "id": "c-reviewed",
+      "kind": "dialogue_text_reviewed",
+      "description": "窗外那段台词必须显式标注审核状态",
+      "origin": "sample",
+      "pack": [
+        "dialogue"
+      ],
+      "verificationMode": "auto",
+      "params": {
+        "nodeId": "n-window"
+      }
+    },
+    {
+      "id": "c-dead",
+      "kind": "no_dead_branch",
+      "description": "任何节点都不能走投无路",
+      "origin": "sample",
+      "pack": [
+        "dialogue"
+      ],
+      "verificationMode": "auto",
+      "params": {}
+    }
+  ]
+}

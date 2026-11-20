@@ -1,0 +1,55 @@
+{
+  "compilerVersion": 1,
+  "id": "brief-4022f9d2c4",
+  "kind": "modify",
+  "rawText": "这关通关不了，帮我修好。门和胜利条件不要改。",
+  "goal": "这关通关不了，帮我修好。门和胜利条件不要改。",
+  "packId": "puzzle",
+  "baseVersionId": "v2",
+  "threadId": "thread-44c11535",
+  "parentRunId": null,
+  "issueId": null,
+  "targetRefs": [],
+  "protectedContracts": [
+    {
+      "id": "c-door",
+      "description": "卷帘门必须用 1 把黄铜钥匙打开"
+    },
+    {
+      "id": "c-exists",
+      "description": "卷帘门不能被删除"
+    },
+    {
+      "id": "c-goal",
+      "description": "胜利必须要求收集钥匙"
+    },
+    {
+      "id": "c-reach",
+      "description": "必须存在真实可通关路线"
+    }
+  ],
+  "allowedOps": [
+    "set_tile",
+    "move_entity",
+    "add_entity",
+    "update_entity",
+    "remove_entity",
+    "add_rule",
+    "update_rule",
+    "remove_rule",
+    "update_goal",
+    "update_presentation",
+    "set_player_spawn",
+    "update_meta"
+  ],
+  "evidenceRefs": {},
+  "userConstraints": [
+    "门和胜利条件不要改"
+  ],
+  "acceptance": [
+    "本次修改形成非空配方 diff",
+    "已确认创作底线保持不变",
+    "机器检查结果与 AI 自述分开呈现"
+  ],
+  "support": "supported"
+}

@@ -1,0 +1,94 @@
+{
+  "ok": true,
+  "mode": "both",
+  "versionId": "v2",
+  "local": [
+    {
+      "ruleId": "grid/key-behind-door",
+      "severity": "error",
+      "message": "开 door-1 需要的 key 被锁在门后（或墙后），玩家拿不到。",
+      "targets": [
+        "door-1",
+        "key-1"
+      ],
+      "quickFix": {
+        "label": "把 key-1 移到门前可达的 (4,6)",
+        "explain": "在不经过任何门就能走到的区域里，选离原位置最近的空地；门、出口和胜利条件都不改。",
+        "ops": [
+          {
+            "op": "move_entity",
+            "entityId": "key-1",
+            "x": 4,
+            "y": 6
+          }
+        ]
+      },
+      "origin": "local",
+      "suggestedGuidance": "自动体检发现：开 door-1 需要的 key 被锁在门后（或墙后），玩家拿不到。 请修复这个问题，不要改动其他内容。"
+    }
+  ],
+  "ai": {
+    "status": "ok",
+    "findings": [
+      {
+        "ruleId": "ai/ai-grid-key-behind-door",
+        "severity": "error",
+        "message": "key-1 位于 door-1 后方的封闭区域内，而 door-1 又要求用 key-1 打开，玩家无法获得钥匙，导致 goal 中的 collected_at_least 与 at_exit 均无法完成。",
+        "targets": [
+          "key-1",
+          "door-1"
+        ],
+        "origin": "ai",
+        "suggestedGuidance": "请在不删除或替换 door-1、保留卷帘门必须用 1 把黄铜钥匙打开、胜利仍要求收集钥匙的前提下，调整地图或 key-1 位置，使玩家在打开 door-1 前可以拿到 key-1，并存在真实可通关路线。"
+      }
+    ],
+    "summary": "配方存在确定不可通关问题：黄铜钥匙被锁在需要该钥匙才能打开的卷帘门后方。",
+    "detail": "",
+    "model": "Qwen/Qwen3.8-Flash-Next",
+    "usage": {
+      "requests": 1,
+      "promptTokens": 671,
+      "completionTokens": 1851,
+      "totalTokens": 2522
+    },
+    "promptChars": 1143,
+    "at": "2026-11-15T02:54:36.675Z"
+  },
+  "findings": [
+    {
+      "ruleId": "grid/key-behind-door",
+      "severity": "error",
+      "message": "开 door-1 需要的 key 被锁在门后（或墙后），玩家拿不到。",
+      "targets": [
+        "door-1",
+        "key-1"
+      ],
+      "quickFix": {
+        "label": "把 key-1 移到门前可达的 (4,6)",
+        "explain": "在不经过任何门就能走到的区域里，选离原位置最近的空地；门、出口和胜利条件都不改。",
+        "ops": [
+          {
+            "op": "move_entity",
+            "entityId": "key-1",
+            "x": 4,
+            "y": 6
+          }
+        ]
+      },
+      "origin": "local",
+      "suggestedGuidance": "自动体检发现：开 door-1 需要的 key 被锁在门后（或墙后），玩家拿不到。 请修复这个问题，不要改动其他内容。"
+    },
+    {
+      "ruleId": "ai/ai-grid-key-behind-door",
+      "severity": "error",
+      "message": "key-1 位于 door-1 后方的封闭区域内，而 door-1 又要求用 key-1 打开，玩家无法获得钥匙，导致 goal 中的 collected_at_least 与 at_exit 均无法完成。",
+      "targets": [
+        "key-1",
+        "door-1"
+      ],
+      "origin": "ai",
+      "suggestedGuidance": "请在不删除或替换 door-1、保留卷帘门必须用 1 把黄铜钥匙打开、胜利仍要求收集钥匙的前提下，调整地图或 key-1 位置，使玩家在打开 door-1 前可以拿到 key-1，并存在真实可通关路线。"
+    }
+  ],
+  "runId": "review-mwh8rxqs"
+}

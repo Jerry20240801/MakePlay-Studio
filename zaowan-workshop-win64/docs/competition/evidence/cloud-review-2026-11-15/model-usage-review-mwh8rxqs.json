@@ -1,0 +1,13 @@
+{
+  "mode": "both",
+  "requests": 1,
+  "model": "Qwen/Qwen3.8-Flash-Next",
+  "status": "ok",
+  "tokens": {
+    "requests": 1,
+    "promptTokens": 671,
+    "completionTokens": 1851,
+    "totalTokens": 2522
+  },
+  "promptChars": 1143
+}

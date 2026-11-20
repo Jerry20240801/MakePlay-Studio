@@ -1,0 +1,64 @@
+{
+  "version": 1,
+  "projectId": "006f88ef-a8ed-4bfd-85ad-c05ccb3614da",
+  "issues": [
+    {
+      "id": "issue-6adc53e1",
+      "projectId": "006f88ef-a8ed-4bfd-85ad-c05ccb3614da",
+      "title": "通关路线搜索",
+      "source": "verification",
+      "status": "resolved",
+      "versionId": "v2",
+      "buildId": "9a1ba25c9deca5d046f9d1e0a066dbd02a2d8a2577c6c4b4078681b5b6744451",
+      "checkIds": [
+        "reachable_goal"
+      ],
+      "reproduction": {
+        "verificationId": "44ac8e235e46d3b4f3f661fca8b0ae221cdb5c9b92b15b6ad04d8adb3344ac58"
+      },
+      "linkedRunIds": [
+        "run-e4e4a9bc"
+      ],
+      "resolution": {
+        "candidateVersionId": "v3",
+        "verificationId": "9ab2f810ad0c4ecb8cfd3ce7cf3b4d5aa3d48dbba2ff50c7b080f60fbb843286",
+        "resolvedCheckIds": [
+          "reachable_goal"
+        ],
+        "requiresUserReview": false,
+        "at": "2026-11-13T09:56:29.860Z"
+      },
+      "createdAt": "2026-11-13T09:56:15.201Z",
+      "updatedAt": "2026-11-13T09:56:29.860Z"
+    },
+    {
+      "id": "issue-04b5c48c",
+      "projectId": "006f88ef-a8ed-4bfd-85ad-c05ccb3614da",
+      "title": "契约 · 必须存在真实可通关路线",
+      "source": "verification",
+      "status": "resolved",
+      "versionId": "v2",
+      "buildId": "9a1ba25c9deca5d046f9d1e0a066dbd02a2d8a2577c6c4b4078681b5b6744451",
+      "checkIds": [
+        "contract:c-reach"
+      ],
+      "reproduction": {
+        "verificationId": "44ac8e235e46d3b4f3f661fca8b0ae221cdb5c9b92b15b6ad04d8adb3344ac58"
+      },
+      "linkedRunIds": [
+        "run-e4e4a9bc"
+      ],
+      "resolution": {
+        "candidateVersionId": "v3",
+        "verificationId": "9ab2f810ad0c4ecb8cfd3ce7cf3b4d5aa3d48dbba2ff50c7b080f60fbb843286",
+        "resolvedCheckIds": [
+          "contract:c-reach"
+        ],
+        "requiresUserReview": false,
+        "at": "2026-11-13T09:56:29.860Z"
+      },
+      "createdAt": "2026-11-13T09:56:15.201Z",
+      "updatedAt": "2026-11-13T09:56:29.860Z"
+    }
+  ]
+}

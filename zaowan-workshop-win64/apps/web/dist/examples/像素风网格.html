@@ -1,0 +1,14 @@
+<!doctype html><meta charset="utf-8"><title>像素风网格</title><link rel="stylesheet" href="_base.css"><style>
+body{background:#1a1423;display:flex;align-items:center;justify-content:center}canvas{image-rendering:pixelated;width:1152px;height:864px}
+</style><canvas id="c" width="192" height="144"></canvas><script>
+const g=document.getElementById('c').getContext('2d'),T=16,map=['############','#..........#','#.####..##.#','#.#..#..#..#','#.#k.D..#.E#','#.####..#..#','#.......##.#','#..........#','############'];
+const px=(x,y,c)=>{g.fillStyle=c;g.fillRect(x,y,1,1)};
+map.forEach((row,y)=>[...row].forEach((ch,x)=>{const X=x*T,Y=y*T;
+ if(ch==='#'){g.fillStyle='#4b3f63';g.fillRect(X,Y,T,T);g.fillStyle='#5f5180';for(let i=0;i<T;i+=4)g.fillRect(X+(i%8),Y+i,T-4,2)}
+ else{g.fillStyle=(x+y)%2?'#2e2540':'#2a2139';g.fillRect(X,Y,T,T)}
+ if(ch==='k'){g.fillStyle='#facc15';g.fillRect(X+4,Y+6,5,5);g.fillRect(X+9,Y+8,5,2);g.fillRect(X+12,Y+8,2,4)}
+ if(ch==='D'){g.fillStyle='#92400e';g.fillRect(X+2,Y+1,12,15);g.fillStyle='#fbbf24';g.fillRect(X+10,Y+8,2,2)}
+ if(ch==='E'){g.fillStyle='#22d3ee';g.fillRect(X+3,Y+2,10,12);g.fillStyle='#a5f3fc';g.fillRect(X+5,Y+4,6,8)}}));
+const hx=2*T,hy=6*T;g.fillStyle='#f8fafc';g.fillRect(hx+5,hy+2,6,5);g.fillStyle='#38bdf8';g.fillRect(hx+4,hy+7,8,6);g.fillStyle='#1e293b';g.fillRect(hx+6,hy+4,1,1);g.fillRect(hx+9,hy+4,1,1);g.fillRect(hx+5,hy+13,2,2);g.fillRect(hx+9,hy+13,2,2);
+</script>
+<script src="_fit.js"></script>

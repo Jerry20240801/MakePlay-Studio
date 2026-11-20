@@ -1,0 +1,393 @@
+{
+  "schemaVersion": 1,
+  "pack": {
+    "id": "card",
+    "version": 1
+  },
+  "meta": {
+    "name": "熔炉决斗",
+    "description": "标准版卡牌：3 场连续战斗，牌组与生命跨场保留，每场结束三选一奖励。种子固定，牌序与洗牌均可复现。",
+    "controls": "点击手牌出牌，点击结束回合，奖励阶段选择一张牌或跳过"
+  },
+  "cards": [
+    {
+      "id": "strike",
+      "name": "打击",
+      "cost": 1,
+      "rarity": "starter",
+      "effects": [
+        {
+          "kind": "damage",
+          "amount": 6
+        }
+      ],
+      "description": "造成 6 点伤害"
+    },
+    {
+      "id": "defend",
+      "name": "防御",
+      "cost": 1,
+      "rarity": "starter",
+      "effects": [
+        {
+          "kind": "block",
+          "amount": 5
+        }
+      ],
+      "description": "获得 5 点格挡"
+    },
+    {
+      "id": "jab",
+      "name": "刺击",
+      "cost": 0,
+      "rarity": "common",
+      "effects": [
+        {
+          "kind": "damage",
+          "amount": 3
+        }
+      ],
+      "description": "造成 3 点伤害"
+    },
+    {
+      "id": "heavy",
+      "name": "重击",
+      "cost": 2,
+      "rarity": "common",
+      "effects": [
+        {
+          "kind": "damage",
+          "amount": 9
+        }
+      ],
+      "description": "造成 9 点伤害"
+    },
+    {
+      "id": "bulwark",
+      "name": "壁垒",
+      "cost": 2,
+      "rarity": "common",
+      "effects": [
+        {
+          "kind": "block",
+          "amount": 9
+        }
+      ],
+      "description": "获得 9 点格挡"
+    },
+    {
+      "id": "expose",
+      "name": "破防",
+      "cost": 1,
+      "rarity": "common",
+      "effects": [
+        {
+          "kind": "apply_vulnerable",
+          "amount": 2
+        }
+      ],
+      "description": "施加 2 层易伤"
+    },
+    {
+      "id": "weaken",
+      "name": "削弱",
+      "cost": 1,
+      "rarity": "common",
+      "effects": [
+        {
+          "kind": "apply_weak",
+          "amount": 2
+        }
+      ],
+      "description": "施加 2 层虚弱"
+    },
+    {
+      "id": "rage",
+      "name": "怒气",
+      "cost": 1,
+      "rarity": "common",
+      "effects": [
+        {
+          "kind": "gain_strength",
+          "amount": 2
+        }
+      ],
+      "description": "获得 2 点力量"
+    },
+    {
+      "id": "insight",
+      "name": "洞察",
+      "cost": 1,
+      "rarity": "common",
+      "effects": [
+        {
+          "kind": "draw",
+          "amount": 2
+        }
+      ],
+      "description": "抽 2 张牌"
+    },
+    {
+      "id": "spark",
+      "name": "火花",
+      "cost": 0,
+      "rarity": "common",
+      "effects": [
+        {
+          "kind": "gain_energy",
+          "amount": 1
+        }
+      ],
+      "description": "获得 1 点能量"
+    },
+    {
+      "id": "twin",
+      "name": "连打",
+      "cost": 1,
+      "rarity": "common",
+      "effects": [
+        {
+          "kind": "damage",
+          "amount": 3
+        },
+        {
+          "kind": "damage",
+          "amount": 3
+        }
+      ],
+      "description": "造成 3 点伤害两次"
+    },
+    {
+      "id": "focus",
+      "name": "专注",
+      "cost": 1,
+      "rarity": "common",
+      "effects": [
+        {
+          "kind": "gain_strength",
+          "amount": 1
+        }
+      ],
+      "description": "获得 1 点力量"
+    },
+    {
+      "id": "shield",
+      "name": "盾墙",
+      "cost": 2,
+      "rarity": "common",
+      "effects": [
+        {
+          "kind": "block",
+          "amount": 7
+        }
+      ],
+      "description": "获得 7 点格挡"
+    },
+    {
+      "id": "taunt",
+      "name": "挑衅",
+      "cost": 1,
+      "rarity": "common",
+      "effects": [
+        {
+          "kind": "apply_vulnerable",
+          "amount": 1
+        },
+        {
+          "kind": "apply_weak",
+          "amount": 1
+        }
+      ],
+      "description": "施加 1 层易伤与 1 层虚弱"
+    },
+    {
+      "id": "finisher",
+      "name": "终结",
+      "cost": 2,
+      "rarity": "rare",
+      "effects": [
+        {
+          "kind": "damage",
+          "amount": 12
+        },
+        {
+          "kind": "exhaust"
+        }
+      ],
+      "description": "造成 12 点伤害，本场移入消耗堆"
+    },
+    {
+      "id": "patience",
+      "name": "忍耐",
+      "cost": 1,
+      "rarity": "rare",
+      "effects": [
+        {
+          "kind": "block",
+          "amount": 6
+        },
+        {
+          "kind": "retain"
+        }
+      ],
+      "description": "获得 6 点格挡，回合结束不被弃置"
+    },
+    {
+      "id": "quickdraw",
+      "name": "速射",
+      "cost": 0,
+      "rarity": "rare",
+      "effects": [
+        {
+          "kind": "draw",
+          "amount": 1
+        },
+        {
+          "kind": "gain_energy",
+          "amount": 1
+        }
+      ],
+      "description": "抽 1 张牌并获得 1 点能量"
+    },
+    {
+      "id": "smash",
+      "name": "粉碎",
+      "cost": 3,
+      "rarity": "rare",
+      "effects": [
+        {
+          "kind": "damage",
+          "amount": 16
+        }
+      ],
+      "description": "造成 16 点伤害"
+    },
+    {
+      "id": "ironwill",
+      "name": "钢铁意志",
+      "cost": 3,
+      "rarity": "rare",
+      "effects": [
+        {
+          "kind": "block",
+          "amount": 14
+        }
+      ],
+      "description": "获得 14 点格挡"
+    },
+    {
+      "id": "burst",
+      "name": "爆发",
+      "cost": 2,
+      "rarity": "rare",
+      "effects": [
+        {
+          "kind": "damage",
+          "amount": 5
+        },
+        {
+          "kind": "draw",
+          "amount": 1
+        },
+        {
+          "kind": "exhaust"
+        }
+      ],
+      "description": "造成 5 点伤害，抽 1 张牌并消耗"
+    }
+  ],
+  "deck": [
+    "strike",
+    "strike",
+    "strike",
+    "defend",
+    "defend",
+    "defend",
+    "jab",
+    "jab",
+    "expose",
+    "rage"
+  ],
+  "enemies": [
+    {
+      "id": "sentinel",
+      "name": "熔炉哨兵",
+      "hp": 30,
+      "intents": [
+        {
+          "kind": "attack",
+          "amount": 8
+        },
+        {
+          "kind": "block",
+          "amount": 5
+        },
+        {
+          "kind": "attack",
+          "amount": 10
+        }
+      ]
+    },
+    {
+      "id": "furnace",
+      "name": "余烬炉",
+      "hp": 42,
+      "intents": [
+        {
+          "kind": "attack",
+          "amount": 10
+        },
+        {
+          "kind": "attack",
+          "amount": 6
+        },
+        {
+          "kind": "block",
+          "amount": 8
+        }
+      ]
+    },
+    {
+      "id": "forgeking",
+      "name": "熔炉之王",
+      "hp": 55,
+      "intents": [
+        {
+          "kind": "attack",
+          "amount": 12
+        },
+        {
+          "kind": "block",
+          "amount": 10
+        },
+        {
+          "kind": "attack",
+          "amount": 14
+        }
+      ]
+    }
+  ],
+  "run": {
+    "battles": 3,
+    "startingHp": 40,
+    "energyPerTurn": 3,
+    "seed": 20261112,
+    "rewardChoices": 3
+  },
+  "presentation": {
+    "theme": {
+      "background": "#1c1917",
+      "floor": "#292524",
+      "wall": "#57534e",
+      "accent": "#ef4444",
+      "text": "#fafaf9"
+    },
+    "cellSize": 48,
+    "sounds": false,
+    "assets": []
+  },
+  "generation": {
+    "method": "handwritten",
+    "note": "随附样例，人工设计；平衡性未经验证"
+  }
+}

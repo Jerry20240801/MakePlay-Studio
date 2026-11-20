@@ -1,0 +1,70 @@
+[
+  {
+    "id": "structure",
+    "title": "Schema 与配方语义",
+    "kind": "auto",
+    "status": "passed",
+    "detail": "字段、上限、引用与结构检查通过"
+  },
+  {
+    "id": "determinism",
+    "title": "纯函数确定性",
+    "kind": "auto",
+    "status": "passed",
+    "detail": "相同配方与动作产生相同结果，输入状态未被修改"
+  },
+  {
+    "id": "initial_state",
+    "title": "初始状态合法性",
+    "kind": "auto",
+    "status": "passed",
+    "detail": "初始状态可玩"
+  },
+  {
+    "id": "reachable_goal",
+    "title": "通关路线搜索",
+    "kind": "auto",
+    "status": "passed",
+    "detail": "找到 14 步路线（184 个状态）"
+  },
+  {
+    "id": "contract:c-door",
+    "title": "契约 · 卷帘门必须用 1 把黄铜钥匙打开",
+    "kind": "auto",
+    "status": "passed",
+    "detail": "门 door-1 需要 1 个 key",
+    "evidence": [
+      "contracts#c-door"
+    ]
+  },
+  {
+    "id": "contract:c-exists",
+    "title": "契约 · 卷帘门不能被删除",
+    "kind": "auto",
+    "status": "passed",
+    "detail": "对象 door-1 仍然存在且类型为 door",
+    "evidence": [
+      "contracts#c-exists"
+    ]
+  },
+  {
+    "id": "contract:c-goal",
+    "title": "契约 · 胜利必须要求收集钥匙",
+    "kind": "auto",
+    "status": "passed",
+    "detail": "胜利条件在结构上必然要求收集 key",
+    "evidence": [
+      "contracts#c-goal"
+    ]
+  },
+  {
+    "id": "contract:c-reach",
+    "title": "契约 · 必须存在真实可通关路线",
+    "kind": "auto",
+    "status": "passed",
+    "detail": "搜索通过 14 步，且浏览器真实输入重放已绑定（run-e7ada85e）",
+    "evidence": [
+      "contracts#c-reach"
+    ]
+  }
+]

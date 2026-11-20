@@ -1,0 +1,83 @@
+{
+  "schemaVersion": 1,
+  "pack": {
+    "id": "puzzle",
+    "version": 1
+  },
+  "meta": {
+    "name": "钥匙门解谜 第一版",
+    "description": "从左上角出发，在中间小房间拿到黄铜钥匙，打开守住通道的卷帘门，走到右下出口。只有一关。",
+    "controls": "方向键/WASD 移动，E 交互，Space 等待，R 重开"
+  },
+  "board": {
+    "width": 8,
+    "height": 8,
+    "rows": [
+      "########",
+      "#......#",
+      "#.#.##.#",
+      "#.#..#.#",
+      "#.#..#.#",
+      "#.######",
+      "#......#",
+      "########"
+    ]
+  },
+  "player": {
+    "spawn": {
+      "x": 1,
+      "y": 1
+    },
+    "facing": "down"
+  },
+  "entities": [
+    {
+      "kind": "exit",
+      "id": "exit-1",
+      "x": 6,
+      "y": 6,
+      "label": "出口"
+    },
+    {
+      "kind": "item",
+      "id": "key-1",
+      "x": 3,
+      "y": 3,
+      "itemType": "key",
+      "count": 1,
+      "label": "黄铜钥匙"
+    },
+    {
+      "kind": "door",
+      "id": "door-1",
+      "x": 5,
+      "y": 6,
+      "requires": {
+        "itemType": "key",
+        "count": 1
+      },
+      "label": "卷帘门"
+    }
+  ],
+  "flags": {},
+  "rules": [],
+  "goal": {
+    "type": "at_exit"
+  },
+  "presentation": {
+    "theme": {
+      "background": "#0b1220",
+      "floor": "#1e293b",
+      "wall": "#475569",
+      "accent": "#fbbf24",
+      "text": "#e2e8f0"
+    },
+    "cellSize": 48,
+    "sounds": false,
+    "assets": []
+  },
+  "generation": {
+    "method": "handwritten",
+    "note": "空白骨架"
+  }
+}

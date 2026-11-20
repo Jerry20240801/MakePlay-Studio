@@ -1,0 +1,83 @@
+{
+  "ok": true,
+  "code": "OK",
+  "message": "浏览器真实键盘输入完成通关",
+  "trace": [
+    {
+      "action": "move:right",
+      "index": 1,
+      "ok": true
+    },
+    {
+      "action": "move:right",
+      "index": 2,
+      "ok": true
+    },
+    {
+      "action": "move:right",
+      "index": 3,
+      "ok": true
+    },
+    {
+      "action": "move:right",
+      "index": 4,
+      "ok": true
+    },
+    {
+      "action": "move:right",
+      "index": 5,
+      "ok": true
+    },
+    {
+      "action": "move:right",
+      "index": 6,
+      "ok": true
+    },
+    {
+      "action": "move:right",
+      "index": 7,
+      "ok": true
+    },
+    {
+      "action": "move:down",
+      "index": 8,
+      "ok": true
+    },
+    {
+      "action": "move:down",
+      "index": 9,
+      "ok": true
+    },
+    {
+      "action": "move:down",
+      "index": 10,
+      "ok": true
+    },
+    {
+      "action": "move:down",
+      "index": 11,
+      "ok": true
+    },
+    {
+      "action": "move:down",
+      "index": 12,
+      "ok": true
+    },
+    {
+      "action": "move:down",
+      "index": 13,
+      "ok": true
+    },
+    {
+      "action": "move:down",
+      "index": 14,
+      "ok": true
+    }
+  ],
+  "consoleErrors": [],
+  "screenshots": [
+    "C:\\Users\\czj\\AppData\\Local\\Temp\\zaowan-p13-repair-sjeT5C\\data\\projects\\006f88ef-a8ed-4bfd-85ad-c05ccb3614da\\runs\\run-e4e4a9bc\\screenshots\\grid-final.png"
+  ],
+  "finalStatus": "won",
+  "browserMode": "launched"
+}

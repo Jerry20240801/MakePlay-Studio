@@ -1,0 +1,23 @@
+{
+  "id": "run-8033d7e6",
+  "projectId": "83fb2b65-ee34-41fe-aed8-fac4779687ac",
+  "instruction": "做一个钥匙门解谜小游戏：玩家从左上角出发，找到钥匙打开门，走到出口；不要做第二关。",
+  "mode": "model",
+  "kind": "initial_generation",
+  "threadId": "thread-bfd36f4a",
+  "parentRunId": null,
+  "issueId": null,
+  "status": "ready_for_review",
+  "createdAt": "2026-11-13T09:53:09.696Z",
+  "updatedAt": "2026-11-13T09:53:40.369Z",
+  "baseVersionId": "v1",
+  "candidateVersionId": "v2",
+  "modelResponses": 7,
+  "toolCalls": 7,
+  "repairs": 0,
+  "guidanceCount": 0,
+  "concerns": {},
+  "error": null,
+  "demo": false,
+  "interrupted": false
+}

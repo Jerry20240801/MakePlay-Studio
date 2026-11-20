@@ -1,0 +1,842 @@
+{
+  "schemaVersion": 1,
+  "pack": {
+    "id": "quiz",
+    "version": 1
+  },
+  "meta": {
+    "name": "单词远征",
+    "description": "33 道题覆盖三个单元与配对练习，生命 3 点，答错扣 1 点；连续答对有封顶加成。",
+    "controls": "鼠标选择选项或输入答案，回车提交，继续按钮进入下一题"
+  },
+  "quiz": {
+    "questions": [
+      {
+        "type": "single_choice",
+        "id": "q-01",
+        "prompt": "apple 的意思是？",
+        "options": [
+          {
+            "id": "a",
+            "text": "苹果"
+          },
+          {
+            "id": "b",
+            "text": "香蕉"
+          },
+          {
+            "id": "c",
+            "text": "橘子"
+          },
+          {
+            "id": "d",
+            "text": "葡萄"
+          }
+        ],
+        "answerKey": [
+          "a"
+        ],
+        "explanation": "apple = 苹果。",
+        "source": "示例词表 · 单元一（项目内置，人工核对）",
+        "reviewed": true
+      },
+      {
+        "type": "single_choice",
+        "id": "q-02",
+        "prompt": "book 的意思是？",
+        "options": [
+          {
+            "id": "a",
+            "text": "桌子"
+          },
+          {
+            "id": "b",
+            "text": "书"
+          },
+          {
+            "id": "c",
+            "text": "笔"
+          },
+          {
+            "id": "d",
+            "text": "窗"
+          }
+        ],
+        "answerKey": [
+          "b"
+        ],
+        "explanation": "book = 书。",
+        "source": "示例词表 · 单元一（项目内置，人工核对）",
+        "reviewed": true
+      },
+      {
+        "type": "single_choice",
+        "id": "q-03",
+        "prompt": "cat 的意思是？",
+        "options": [
+          {
+            "id": "a",
+            "text": "狗"
+          },
+          {
+            "id": "b",
+            "text": "鸟"
+          },
+          {
+            "id": "c",
+            "text": "猫"
+          },
+          {
+            "id": "d",
+            "text": "鱼"
+          }
+        ],
+        "answerKey": [
+          "c"
+        ],
+        "explanation": "cat = 猫。",
+        "source": "示例词表 · 单元一（项目内置，人工核对）",
+        "reviewed": true
+      },
+      {
+        "type": "single_choice",
+        "id": "q-04",
+        "prompt": "door 的意思是？",
+        "options": [
+          {
+            "id": "a",
+            "text": "门"
+          },
+          {
+            "id": "b",
+            "text": "墙"
+          },
+          {
+            "id": "c",
+            "text": "地板"
+          },
+          {
+            "id": "d",
+            "text": "屋顶"
+          }
+        ],
+        "answerKey": [
+          "a"
+        ],
+        "explanation": "door = 门。",
+        "source": "示例词表 · 单元一（项目内置，人工核对）",
+        "reviewed": true
+      },
+      {
+        "type": "single_choice",
+        "id": "q-05",
+        "prompt": "egg 的意思是？",
+        "options": [
+          {
+            "id": "a",
+            "text": "牛奶"
+          },
+          {
+            "id": "b",
+            "text": "面包"
+          },
+          {
+            "id": "c",
+            "text": "鸡蛋"
+          },
+          {
+            "id": "d",
+            "text": "米饭"
+          }
+        ],
+        "answerKey": [
+          "c"
+        ],
+        "explanation": "egg = 鸡蛋。",
+        "source": "示例词表 · 单元一（项目内置，人工核对）",
+        "reviewed": true
+      },
+      {
+        "type": "single_choice",
+        "id": "q-06",
+        "prompt": "fish 的意思是？",
+        "options": [
+          {
+            "id": "a",
+            "text": "鱼"
+          },
+          {
+            "id": "b",
+            "text": "虾"
+          },
+          {
+            "id": "c",
+            "text": "蟹"
+          },
+          {
+            "id": "d",
+            "text": "贝"
+          }
+        ],
+        "answerKey": [
+          "a"
+        ],
+        "explanation": "fish = 鱼。",
+        "source": "示例词表 · 单元一（项目内置，人工核对）",
+        "reviewed": true
+      },
+      {
+        "type": "single_choice",
+        "id": "q-07",
+        "prompt": "green 的意思是？",
+        "options": [
+          {
+            "id": "a",
+            "text": "红色"
+          },
+          {
+            "id": "b",
+            "text": "绿色"
+          },
+          {
+            "id": "c",
+            "text": "黄色"
+          },
+          {
+            "id": "d",
+            "text": "蓝色"
+          }
+        ],
+        "answerKey": [
+          "b"
+        ],
+        "explanation": "green = 绿色。",
+        "source": "示例词表 · 单元一（项目内置，人工核对）",
+        "reviewed": true
+      },
+      {
+        "type": "single_choice",
+        "id": "q-08",
+        "prompt": "hand 的意思是？",
+        "options": [
+          {
+            "id": "a",
+            "text": "脚"
+          },
+          {
+            "id": "b",
+            "text": "头"
+          },
+          {
+            "id": "c",
+            "text": "手"
+          },
+          {
+            "id": "d",
+            "text": "腿"
+          }
+        ],
+        "answerKey": [
+          "c"
+        ],
+        "explanation": "hand = 手。",
+        "source": "示例词表 · 单元一（项目内置，人工核对）",
+        "reviewed": true
+      },
+      {
+        "type": "single_choice",
+        "id": "q-09",
+        "prompt": "ice 的意思是？",
+        "options": [
+          {
+            "id": "a",
+            "text": "水"
+          },
+          {
+            "id": "b",
+            "text": "冰"
+          },
+          {
+            "id": "c",
+            "text": "火"
+          },
+          {
+            "id": "d",
+            "text": "风"
+          }
+        ],
+        "answerKey": [
+          "b"
+        ],
+        "explanation": "ice = 冰。",
+        "source": "示例词表 · 单元一（项目内置，人工核对）",
+        "reviewed": true
+      },
+      {
+        "type": "single_choice",
+        "id": "q-10",
+        "prompt": "jump 的意思是？",
+        "options": [
+          {
+            "id": "a",
+            "text": "跑"
+          },
+          {
+            "id": "b",
+            "text": "跳"
+          },
+          {
+            "id": "c",
+            "text": "走"
+          },
+          {
+            "id": "d",
+            "text": "坐"
+          }
+        ],
+        "answerKey": [
+          "b"
+        ],
+        "explanation": "jump = 跳。",
+        "source": "示例词表 · 单元一（项目内置，人工核对）",
+        "reviewed": true
+      },
+      {
+        "type": "single_choice",
+        "id": "q-11",
+        "prompt": "library 的意思是？",
+        "options": [
+          {
+            "id": "a",
+            "text": "图书馆"
+          },
+          {
+            "id": "b",
+            "text": "医院"
+          },
+          {
+            "id": "c",
+            "text": "学校"
+          },
+          {
+            "id": "d",
+            "text": "商店"
+          }
+        ],
+        "answerKey": [
+          "a"
+        ],
+        "explanation": "library = 图书馆。",
+        "source": "示例词表 · 单元二（项目内置，人工核对）",
+        "reviewed": true
+      },
+      {
+        "type": "single_choice",
+        "id": "q-12",
+        "prompt": "market 的意思是？",
+        "options": [
+          {
+            "id": "a",
+            "text": "公园"
+          },
+          {
+            "id": "b",
+            "text": "市场"
+          },
+          {
+            "id": "c",
+            "text": "车站"
+          },
+          {
+            "id": "d",
+            "text": "银行"
+          }
+        ],
+        "answerKey": [
+          "b"
+        ],
+        "explanation": "market = 市场。",
+        "source": "示例词表 · 单元二（项目内置，人工核对）",
+        "reviewed": true
+      },
+      {
+        "type": "single_choice",
+        "id": "q-13",
+        "prompt": "weather 的意思是？",
+        "options": [
+          {
+            "id": "a",
+            "text": "天气"
+          },
+          {
+            "id": "b",
+            "text": "时间"
+          },
+          {
+            "id": "c",
+            "text": "星期"
+          },
+          {
+            "id": "d",
+            "text": "季节"
+          }
+        ],
+        "answerKey": [
+          "a"
+        ],
+        "explanation": "weather = 天气。",
+        "source": "示例词表 · 单元二（项目内置，人工核对）",
+        "reviewed": true
+      },
+      {
+        "type": "single_choice",
+        "id": "q-14",
+        "prompt": "borrow 的意思是？",
+        "options": [
+          {
+            "id": "a",
+            "text": "借入"
+          },
+          {
+            "id": "b",
+            "text": "借出"
+          },
+          {
+            "id": "c",
+            "text": "购买"
+          },
+          {
+            "id": "d",
+            "text": "归还"
+          }
+        ],
+        "answerKey": [
+          "a"
+        ],
+        "explanation": "borrow = 借入。",
+        "source": "示例词表 · 单元二（项目内置，人工核对）",
+        "reviewed": true
+      },
+      {
+        "type": "single_choice",
+        "id": "q-15",
+        "prompt": "dangerous 的意思是？",
+        "options": [
+          {
+            "id": "a",
+            "text": "安全的"
+          },
+          {
+            "id": "b",
+            "text": "危险的"
+          },
+          {
+            "id": "c",
+            "text": "安静的"
+          },
+          {
+            "id": "d",
+            "text": "嘈杂的"
+          }
+        ],
+        "answerKey": [
+          "b"
+        ],
+        "explanation": "dangerous = 危险的。",
+        "source": "示例词表 · 单元二（项目内置，人工核对）",
+        "reviewed": true
+      },
+      {
+        "type": "single_choice",
+        "id": "q-16",
+        "prompt": "invite 的意思是？",
+        "options": [
+          {
+            "id": "a",
+            "text": "邀请"
+          },
+          {
+            "id": "b",
+            "text": "拒绝"
+          },
+          {
+            "id": "c",
+            "text": "拜访"
+          },
+          {
+            "id": "d",
+            "text": "等待"
+          }
+        ],
+        "answerKey": [
+          "a"
+        ],
+        "explanation": "invite = 邀请。",
+        "source": "示例词表 · 单元二（项目内置，人工核对）",
+        "reviewed": true
+      },
+      {
+        "type": "single_choice",
+        "id": "q-17",
+        "prompt": "repair 的意思是？",
+        "options": [
+          {
+            "id": "a",
+            "text": "破坏"
+          },
+          {
+            "id": "b",
+            "text": "修理"
+          },
+          {
+            "id": "c",
+            "text": "出售"
+          },
+          {
+            "id": "d",
+            "text": "设计"
+          }
+        ],
+        "answerKey": [
+          "b"
+        ],
+        "explanation": "repair = 修理。",
+        "source": "示例词表 · 单元二（项目内置，人工核对）",
+        "reviewed": true
+      },
+      {
+        "type": "single_choice",
+        "id": "q-18",
+        "prompt": "quiet 的意思是？",
+        "options": [
+          {
+            "id": "a",
+            "text": "安静的"
+          },
+          {
+            "id": "b",
+            "text": "吵闹的"
+          },
+          {
+            "id": "c",
+            "text": "快速的"
+          },
+          {
+            "id": "d",
+            "text": "缓慢的"
+          }
+        ],
+        "answerKey": [
+          "a"
+        ],
+        "explanation": "quiet = 安静的。",
+        "source": "示例词表 · 单元二（项目内置，人工核对）",
+        "reviewed": true
+      },
+      {
+        "type": "single_choice",
+        "id": "q-19",
+        "prompt": "travel 的意思是？",
+        "options": [
+          {
+            "id": "a",
+            "text": "旅行"
+          },
+          {
+            "id": "b",
+            "text": "工作"
+          },
+          {
+            "id": "c",
+            "text": "学习"
+          },
+          {
+            "id": "d",
+            "text": "休息"
+          }
+        ],
+        "answerKey": [
+          "a"
+        ],
+        "explanation": "travel = 旅行。",
+        "source": "示例词表 · 单元二（项目内置，人工核对）",
+        "reviewed": true
+      },
+      {
+        "type": "single_choice",
+        "id": "q-20",
+        "prompt": "answer 的意思是？",
+        "options": [
+          {
+            "id": "a",
+            "text": "问题"
+          },
+          {
+            "id": "b",
+            "text": "回答"
+          },
+          {
+            "id": "c",
+            "text": "考试"
+          },
+          {
+            "id": "d",
+            "text": "作业"
+          }
+        ],
+        "answerKey": [
+          "b"
+        ],
+        "explanation": "answer = 回答。",
+        "source": "示例词表 · 单元二（项目内置，人工核对）",
+        "reviewed": true
+      },
+      {
+        "type": "multi_choice",
+        "id": "q-21",
+        "prompt": "以下哪些是颜色？",
+        "options": [
+          {
+            "id": "a",
+            "text": "red"
+          },
+          {
+            "id": "b",
+            "text": "blue"
+          },
+          {
+            "id": "c",
+            "text": "table"
+          },
+          {
+            "id": "d",
+            "text": "green"
+          }
+        ],
+        "answerKey": [
+          "a",
+          "b",
+          "d"
+        ],
+        "explanation": "red/blue/green 是颜色。",
+        "source": "示例词表 · 单元三（项目内置，人工核对）",
+        "reviewed": true
+      },
+      {
+        "type": "multi_choice",
+        "id": "q-22",
+        "prompt": "以下哪些是动物？",
+        "options": [
+          {
+            "id": "a",
+            "text": "horse"
+          },
+          {
+            "id": "b",
+            "text": "rabbit"
+          },
+          {
+            "id": "c",
+            "text": "chair"
+          },
+          {
+            "id": "d",
+            "text": "sheep"
+          }
+        ],
+        "answerKey": [
+          "a",
+          "b",
+          "d"
+        ],
+        "explanation": "horse/rabbit/sheep 是动物。",
+        "source": "示例词表 · 单元三（项目内置，人工核对）",
+        "reviewed": true
+      },
+      {
+        "type": "true_false",
+        "id": "q-23",
+        "prompt": "句子 'I has a book.' 语法正确。",
+        "answerKey": [
+          "false"
+        ],
+        "explanation": "应为 I have a book。",
+        "source": "示例词表 · 单元三（项目内置，人工核对）",
+        "reviewed": true
+      },
+      {
+        "type": "true_false",
+        "id": "q-24",
+        "prompt": "'children' 是 child 的复数形式。",
+        "answerKey": [
+          "true"
+        ],
+        "explanation": "children 是 child 的不规则复数。",
+        "source": "示例词表 · 单元三（项目内置，人工核对）",
+        "reviewed": true
+      },
+      {
+        "type": "true_false",
+        "id": "q-25",
+        "prompt": "'go' 的过去式是 'goed'。",
+        "answerKey": [
+          "false"
+        ],
+        "explanation": "go 的过去式是 went。",
+        "source": "示例词表 · 单元三（项目内置，人工核对）",
+        "reviewed": true
+      },
+      {
+        "type": "short_text",
+        "id": "q-26",
+        "prompt": "写出 '猫' 的英文单词。",
+        "answerKey": [
+          "cat"
+        ],
+        "explanation": "cat 是猫，kitten 是小猫（作为别名接受）。",
+        "source": "示例词表 · 单元一（项目内置，人工核对）",
+        "reviewed": true,
+        "aliases": [
+          "kitten"
+        ]
+      },
+      {
+        "type": "short_text",
+        "id": "q-27",
+        "prompt": "写出 '书' 的英文单词。",
+        "answerKey": [
+          "book"
+        ],
+        "explanation": "book = 书。",
+        "source": "示例词表 · 单元一（项目内置，人工核对）",
+        "reviewed": true
+      },
+      {
+        "type": "short_text",
+        "id": "q-28",
+        "prompt": "写出 '冰' 的英文单词。",
+        "answerKey": [
+          "ice"
+        ],
+        "explanation": "ice = 冰。",
+        "source": "示例词表 · 单元一（项目内置，人工核对）",
+        "reviewed": true
+      },
+      {
+        "type": "short_text",
+        "id": "q-29",
+        "prompt": "写出 '市场' 的英文单词。",
+        "answerKey": [
+          "market"
+        ],
+        "explanation": "market = 市场，bazaar 作为别名接受。",
+        "source": "示例词表 · 单元二（项目内置，人工核对）",
+        "reviewed": true,
+        "aliases": [
+          "bazaar"
+        ]
+      },
+      {
+        "type": "short_text",
+        "id": "q-30",
+        "prompt": "写出 '修理' 的英文单词。",
+        "answerKey": [
+          "repair"
+        ],
+        "explanation": "repair = 修理，fix 作为别名接受。",
+        "source": "示例词表 · 单元二（项目内置，人工核对）",
+        "reviewed": true,
+        "aliases": [
+          "fix"
+        ]
+      },
+      {
+        "type": "matching",
+        "id": "q-31",
+        "prompt": "把单词和中文配对",
+        "pairs": [
+          {
+            "left": "apple",
+            "right": "苹果"
+          },
+          {
+            "left": "book",
+            "right": "书"
+          },
+          {
+            "left": "cat",
+            "right": "猫"
+          }
+        ],
+        "explanation": "apple=苹果，book=书，cat=猫。",
+        "source": "示例词表 · 配对练习（项目内置）",
+        "reviewed": true
+      },
+      {
+        "type": "matching",
+        "id": "q-32",
+        "prompt": "把动词和中文配对",
+        "pairs": [
+          {
+            "left": "jump",
+            "right": "跳"
+          },
+          {
+            "left": "run",
+            "right": "跑"
+          },
+          {
+            "left": "sit",
+            "right": "坐"
+          }
+        ],
+        "explanation": "jump=跳，run=跑，sit=坐。",
+        "source": "示例词表 · 配对练习（项目内置）",
+        "reviewed": true
+      },
+      {
+        "type": "matching",
+        "id": "q-33",
+        "prompt": "把颜色和中文配对",
+        "pairs": [
+          {
+            "left": "green",
+            "right": "绿色"
+          },
+          {
+            "left": "blue",
+            "right": "蓝色"
+          },
+          {
+            "left": "red",
+            "right": "红色"
+          }
+        ],
+        "explanation": "green=绿色，blue=蓝色，red=红色。",
+        "source": "示例词表 · 配对练习（项目内置）",
+        "reviewed": true
+      }
+    ],
+    "lives": 3,
+    "order": "fixed",
+    "seed": 2026,
+    "pointsPerCorrect": 10,
+    "comboBonus": 2
+  },
+  "presentation": {
+    "theme": {
+      "background": "#f8fafc",
+      "floor": "#e2e8f0",
+      "wall": "#94a3b8",
+      "accent": "#2563eb",
+      "text": "#0f172a"
+    },
+    "cellSize": 48,
+    "sounds": false,
+    "assets": []
+  },
+  "generation": {
+    "method": "handwritten",
+    "note": "随附样例，人工编写并由用户核对"
+  }
+}

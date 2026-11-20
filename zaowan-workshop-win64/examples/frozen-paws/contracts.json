@@ -1,0 +1,64 @@
+{
+  "contractVersion": 1,
+  "entries": [
+    {
+      "id": "c-guard-clock",
+      "kind": "guard_clock_equals",
+      "description": "守卫只在玩家每成功移动 2 格时行动一次",
+      "origin": "sample",
+      "pack": [
+        "stealth"
+      ],
+      "verificationMode": "auto",
+      "params": {
+        "guardId": "guard-1",
+        "basis": "successful_move",
+        "every": 2
+      }
+    },
+    {
+      "id": "c-key-consumption",
+      "kind": "preserve_mechanic",
+      "description": "库门必须消耗钥匙才能打开",
+      "origin": "sample",
+      "pack": [
+        "stealth"
+      ],
+      "verificationMode": "auto",
+      "params": {
+        "mechanic": "key_consumption",
+        "doorId": "door-1",
+        "itemType": "key",
+        "count": 1
+      }
+    },
+    {
+      "id": "c-goal-fish",
+      "kind": "goal_requires_collection",
+      "description": "胜利必须要求拿到鱼干",
+      "origin": "sample",
+      "pack": [
+        "stealth"
+      ],
+      "verificationMode": "auto",
+      "params": {
+        "itemType": "fish",
+        "count": 1
+      }
+    },
+    {
+      "id": "c-reach",
+      "kind": "reachable_goal",
+      "description": "必须存在真实可通关路线",
+      "origin": "sample",
+      "pack": [
+        "stealth"
+      ],
+      "verificationMode": "auto",
+      "params": {
+        "maxStates": 50000,
+        "maxSteps": 600
+      }
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "id": "83fb2b65-ee34-41fe-aed8-fac4779687ac",
+  "name": "真实模型首次生成",
+  "packId": "puzzle",
+  "createdAt": "2026-11-13T09:53:09.680Z",
+  "updatedAt": "2026-11-13T09:53:39.199Z",
+  "currentVersionId": "v2",
+  "adoptedVersionId": "v1",
+  "lastVerifiedVersionId": "v2",
+  "versions": [
+    {
+      "id": "v1",
+      "createdAt": "2026-11-13T09:53:09.680Z",
+      "note": "初始骨架",
+      "source": "user",
+      "buildId": "6a812cc62f076cdad56894c5b91febe9879f098aaec38e5bd823ef57b854b05a",
+      "recipeHash": "05cd24081f716529b4fcc5ccee02f719d47089783a6cb876e90599f4b885f591",
+      "status": "stable",
+      "parentId": null,
+      "verified": null
+    },
+    {
+      "id": "v2",
+      "createdAt": "2026-11-13T09:53:34.477Z",
+      "note": "第一版钥匙门解谜：钥匙放在中间小房间，门守在通往出口的唯一走道；不做第二关。",
+      "source": "agent",
+      "buildId": "3d501cde23cf11fb10d913f22a13858c34776e2cb2a47d0bbc370b31f21e775c",
+      "recipeHash": "5ac292b231be5a5c659cca19d07e1fd400e584b7595f9fe5ee72a0aecda8e08d",
+      "status": "candidate",
+      "parentId": "v1",
+      "verified": {
+        "status": "passed",
+        "verificationId": "bcee7885e55f9157deaa490628274b2e66ba1261a5c19702fd784ffd89da6d14",
+        "at": "2026-11-13T09:53:39.199Z"
+      }
+    }
+  ],
+  "contracts": {
+    "contractVersion": 1,
+    "id": "contracts-83fb2b65-ee34-41fe-aed8-fac4779687ac",
+    "projectId": "83fb2b65-ee34-41fe-aed8-fac4779687ac",
+    "entries": [],
+    "createdAt": "2026-11-13T09:53:09.680Z",
+    "confirmedAt": null
+  },
+  "sample": null
+}

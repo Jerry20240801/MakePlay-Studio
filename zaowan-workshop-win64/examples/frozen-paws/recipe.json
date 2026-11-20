@@ -1,0 +1,161 @@
+{
+  "schemaVersion": 1,
+  "pack": {
+    "id": "stealth",
+    "version": 1
+  },
+  "meta": {
+    "name": "时间停在猫爪下",
+    "description": "猫潜入博物馆取鱼干：守卫只在猫成功移动时前进，等待与撞墙不会推进守卫。拿到钥匙开门，取鱼干后回到出口。",
+    "controls": "方向键/WASD 移动，E 开门，Space 原地等待（守卫不动），R 重开"
+  },
+  "board": {
+    "width": 11,
+    "height": 10,
+    "rows": [
+      "###########",
+      "#.........#",
+      "#.#######.#",
+      "#.........#",
+      "#..#...#..#",
+      "#.........#",
+      "#..#...#..#",
+      "#.........#",
+      "#.........#",
+      "###########"
+    ]
+  },
+  "player": {
+    "spawn": {
+      "x": 1,
+      "y": 1
+    },
+    "facing": "down"
+  },
+  "entities": [
+    {
+      "kind": "guard",
+      "id": "guard-1",
+      "x": 5,
+      "y": 6,
+      "facing": "down",
+      "route": [
+        {
+          "x": 5,
+          "y": 6
+        },
+        {
+          "x": 6,
+          "y": 6
+        },
+        {
+          "x": 6,
+          "y": 7
+        },
+        {
+          "x": 5,
+          "y": 7
+        }
+      ],
+      "clock": {
+        "basis": "successful_move",
+        "every": 2
+      },
+      "label": "夜班保安"
+    },
+    {
+      "kind": "item",
+      "id": "key-1",
+      "x": 1,
+      "y": 8,
+      "itemType": "key",
+      "count": 1,
+      "label": "储藏室钥匙"
+    },
+    {
+      "kind": "item",
+      "id": "fish-1",
+      "x": 7,
+      "y": 8,
+      "itemType": "fish",
+      "count": 1,
+      "label": "鱼干"
+    },
+    {
+      "kind": "door",
+      "id": "door-1",
+      "x": 4,
+      "y": 8,
+      "requires": {
+        "itemType": "key",
+        "count": 1
+      },
+      "label": "库门"
+    },
+    {
+      "kind": "exit",
+      "id": "exit-1",
+      "x": 9,
+      "y": 8,
+      "label": "通风口"
+    }
+  ],
+  "flags": {},
+  "rules": [
+    {
+      "id": "rule-key-msg",
+      "event": {
+        "type": "item_collected",
+        "entityId": "key-1"
+      },
+      "effects": [
+        {
+          "type": "show_message",
+          "text": "拿到储藏室钥匙"
+        }
+      ]
+    },
+    {
+      "id": "rule-fish-msg",
+      "event": {
+        "type": "item_collected",
+        "entityId": "fish-1"
+      },
+      "effects": [
+        {
+          "type": "show_message",
+          "text": "找到鱼干，回到通风口"
+        }
+      ]
+    }
+  ],
+  "goal": {
+    "type": "all",
+    "of": [
+      {
+        "type": "at_exit"
+      },
+      {
+        "type": "collected_at_least",
+        "itemType": "fish",
+        "count": 1
+      }
+    ]
+  },
+  "presentation": {
+    "theme": {
+      "background": "#111827",
+      "floor": "#1f2937",
+      "wall": "#4b5563",
+      "accent": "#f59e0b",
+      "text": "#e5e7eb"
+    },
+    "cellSize": 48,
+    "sounds": true,
+    "assets": []
+  },
+  "generation": {
+    "method": "handwritten",
+    "note": "随附样例，人工设计"
+  }
+}

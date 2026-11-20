@@ -1,0 +1,10 @@
+{
+  "runId": "run-3ca48f62",
+  "versionId": "v3",
+  "buildId": "bb012179ea3740e0d8b62663cecf1b4eaa893710269eb62c5dd6d49d858023ab",
+  "contractHash": "7ddb9a8d9209ffbe13a42279034eee43c8af17017560089c917684713e06fb0e",
+  "verificationId": "8d07eef064d967a0bacc0a41e2d11ab8831a0eb87e318574e05c3c98229000f3",
+  "status": "passed",
+  "replayBound": true,
+  "at": "2026-11-13T15:20:18.041Z"
+}

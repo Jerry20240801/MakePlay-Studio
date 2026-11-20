@@ -1,0 +1,32 @@
+{
+  "contractVersion": 1,
+  "entries": [
+    {
+      "id": "c-deck-legal",
+      "kind": "card_deck_legality",
+      "description": "初始牌组必须合法（5～20 张，同名不超过 3 张）",
+      "origin": "sample",
+      "pack": [
+        "card"
+      ],
+      "verificationMode": "auto",
+      "params": {}
+    },
+    {
+      "id": "c-numbers",
+      "kind": "card_rule_numbers_locked",
+      "description": "打击与防御的数值不能被自动降低来通过测试",
+      "origin": "sample",
+      "pack": [
+        "card"
+      ],
+      "verificationMode": "auto",
+      "params": {
+        "cardIds": [
+          "strike",
+          "defend"
+        ]
+      }
+    }
+  ]
+}

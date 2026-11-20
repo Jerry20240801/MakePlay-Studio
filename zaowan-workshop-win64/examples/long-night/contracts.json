@@ -1,0 +1,56 @@
+{
+  "contractVersion": 1,
+  "entries": [
+    {
+      "id": "c-lamp",
+      "kind": "ending_locked",
+      "description": "结局“灯又亮了”的标题与条件不能被自动改动",
+      "origin": "sample",
+      "pack": [
+        "dialogue"
+      ],
+      "verificationMode": "auto",
+      "params": {
+        "endingId": "ending-lamp"
+      }
+    },
+    {
+      "id": "c-log",
+      "kind": "choice_effect_locked",
+      "description": "翻开航行日志这条选择的去向固定",
+      "origin": "sample",
+      "pack": [
+        "dialogue"
+      ],
+      "verificationMode": "auto",
+      "params": {
+        "nodeId": "n-center",
+        "choiceId": "c-log"
+      }
+    },
+    {
+      "id": "c-anchor",
+      "kind": "dialogue_text_reviewed",
+      "description": "船长那段台词必须显式标注审核状态",
+      "origin": "sample",
+      "pack": [
+        "dialogue"
+      ],
+      "verificationMode": "auto",
+      "params": {
+        "nodeId": "n-anchor"
+      }
+    },
+    {
+      "id": "c-dead",
+      "kind": "no_dead_branch",
+      "description": "任何节点都不能走投无路",
+      "origin": "sample",
+      "pack": [
+        "dialogue"
+      ],
+      "verificationMode": "auto",
+      "params": {}
+    }
+  ]
+}

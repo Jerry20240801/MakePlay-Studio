@@ -1,0 +1,63 @@
+{
+  "contractVersion": 1,
+  "entries": [
+    {
+      "id": "c-door",
+      "kind": "door_requires_item",
+      "description": "卷帘门必须用 1 把黄铜钥匙打开",
+      "origin": "sample",
+      "pack": [
+        "puzzle",
+        "stealth"
+      ],
+      "verificationMode": "auto",
+      "params": {
+        "doorId": "door-1",
+        "itemType": "key",
+        "count": 1
+      }
+    },
+    {
+      "id": "c-door-exists",
+      "kind": "required_entity_exists",
+      "description": "卷帘门不能被删除或换身份",
+      "origin": "sample",
+      "pack": [
+        "puzzle"
+      ],
+      "verificationMode": "auto",
+      "params": {
+        "entityId": "door-1",
+        "entityKind": "door"
+      }
+    },
+    {
+      "id": "c-goal-collect",
+      "kind": "goal_requires_collection",
+      "description": "胜利必须要求收集过钥匙",
+      "origin": "sample",
+      "pack": [
+        "puzzle"
+      ],
+      "verificationMode": "auto",
+      "params": {
+        "itemType": "key",
+        "count": 1
+      }
+    },
+    {
+      "id": "c-reach",
+      "kind": "reachable_goal",
+      "description": "必须存在真实可通关路线",
+      "origin": "sample",
+      "pack": [
+        "puzzle"
+      ],
+      "verificationMode": "auto",
+      "params": {
+        "maxStates": 50000,
+        "maxSteps": 600
+      }
+    }
+  ]
+}

@@ -1,0 +1,176 @@
+{
+  "schemaVersion": 1,
+  "pack": {
+    "id": "dialogue",
+    "version": 1
+  },
+  "meta": {
+    "name": "末班车",
+    "description": "末班车进站前，你要决定留下还是上车。两条结局线，三处关键选择。",
+    "controls": "Enter 推进，数字键 1-4 选择，R 重开"
+  },
+  "dialogue": {
+    "startNodeId": "n-start",
+    "maxSteps": 60,
+    "flags": [
+      {
+        "id": "kind",
+        "initial": false
+      },
+      {
+        "id": "stay",
+        "initial": false
+      },
+      {
+        "id": "leave",
+        "initial": false
+      }
+    ],
+    "nodes": [
+      {
+        "id": "n-start",
+        "speaker": "旁白",
+        "text": "末班车还有三分钟进站。风从隧道里灌上来，站牌响个不停。",
+        "choices": [
+          {
+            "id": "c-wait",
+            "text": "留在站台，再等一会儿",
+            "goto": "n-platform"
+          },
+          {
+            "id": "c-board",
+            "text": "直接上车",
+            "set": [
+              "kind"
+            ],
+            "goto": "n-car"
+          }
+        ],
+        "reviewed": true
+      },
+      {
+        "id": "n-platform",
+        "speaker": "旁白",
+        "text": "轨道尽头有一盏灯慢慢靠近，广播重复着同一句提醒。",
+        "goto": "n-end",
+        "reviewed": true
+      },
+      {
+        "id": "n-car",
+        "speaker": "列车员",
+        "text": "这趟车不回头。你要去哪一站？",
+        "choices": [
+          {
+            "id": "c-window",
+            "text": "先看看窗外",
+            "goto": "n-window"
+          },
+          {
+            "id": "c-leave",
+            "text": "我在下一站下车",
+            "set": [
+              "leave"
+            ],
+            "goto": "n-leave"
+          },
+          {
+            "id": "c-go",
+            "text": "去终点站",
+            "goto": "n-end"
+          }
+        ],
+        "reviewed": true
+      },
+      {
+        "id": "n-window",
+        "speaker": "旁白",
+        "text": "窗外掠过一排旧仓库，铁轨在雾里分岔。",
+        "choices": [
+          {
+            "id": "c-back",
+            "text": "回到座位",
+            "goto": "n-corridor"
+          }
+        ],
+        "reviewed": false
+      },
+      {
+        "id": "n-corridor",
+        "speaker": "旁白",
+        "text": "车厢连接处很晃，你扶着栏杆走回座位。",
+        "goto": "n-end",
+        "reviewed": true
+      },
+      {
+        "id": "n-end",
+        "speaker": "列车员",
+        "text": "终点站快到了，准备下车。",
+        "set": [
+          "kind"
+        ],
+        "goto": "n-stay",
+        "reviewed": true
+      },
+      {
+        "id": "n-stay",
+        "speaker": "旁白",
+        "text": "你在终点站下了车，城市刚刚醒来。",
+        "set": [
+          "stay"
+        ],
+        "reviewed": true
+      },
+      {
+        "id": "n-leave",
+        "speaker": "旁白",
+        "text": "你在下一站下了车，末班车的尾灯很快消失。",
+        "set": [
+          "leave"
+        ],
+        "reviewed": true
+      }
+    ],
+    "endings": [
+      {
+        "id": "ending-stay",
+        "title": "留在站台",
+        "require": [
+          {
+            "type": "flag_is",
+            "flag": "stay",
+            "value": true
+          }
+        ],
+        "text": "你留在了站台，听完了整段广播。"
+      },
+      {
+        "id": "ending-leave",
+        "title": "在下一站下车",
+        "require": [
+          {
+            "type": "flag_is",
+            "flag": "leave",
+            "value": true
+          }
+        ],
+        "text": "你在下一站下车，走进还没醒的街道。"
+      }
+    ]
+  },
+  "presentation": {
+    "theme": {
+      "background": "#111827",
+      "floor": "#1f2937",
+      "wall": "#4b5563",
+      "accent": "#f59e0b",
+      "text": "#e5e7eb"
+    },
+    "cellSize": 48,
+    "sounds": false,
+    "assets": []
+  },
+  "generation": {
+    "method": "handwritten",
+    "note": "随附样例，人工编写"
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "runId": "run-3ca48f62",
+  "mode": "model",
+  "kind": "modify",
+  "threadId": "thread-44c11535",
+  "parentRunId": null,
+  "issueId": null,
+  "instruction": "这关通关不了，帮我修好。门和胜利条件不要改。",
+  "status": "ready_for_review",
+  "baseVersionId": "v2",
+  "candidateVersionId": "v3",
+  "modelResponses": 8,
+  "toolCalls": 8,
+  "repairs": 0,
+  "narratedSteps": 8,
+  "silentSteps": 0,
+  "explanationCoverage": 1,
+  "concerns": {},
+  "feedbackFixes": [
+    {
+      "failedCheckIds": [
+        "reachable_goal",
+        "contract:c-reach"
+      ],
+      "resolvedCheckIds": [
+        "reachable_goal",
+        "contract:c-reach"
+      ],
+      "attempt": 1,
+      "candidateVersionId": "v3"
+    }
+  ],
+  "guidanceCount": 0,
+  "durationMs": 118170,
+  "demo": false
+}

@@ -1,0 +1,63 @@
+{
+  "schemaVersion": 1,
+  "pack": {
+    "id": "puzzle",
+    "version": 1
+  },
+  "meta": {
+    "name": "真实模型首次生成",
+    "description": "做一个钥匙门解谜小游戏：玩家从左上角出发，找到钥匙打开门，走到出口；不要做第二关。",
+    "controls": "方向键/WASD 移动，E 交互，Space 等待，R 重开"
+  },
+  "board": {
+    "width": 8,
+    "height": 8,
+    "rows": [
+      "########",
+      "#......#",
+      "#.####.#",
+      "#.#..#.#",
+      "#.#..#.#",
+      "#.####.#",
+      "#......#",
+      "########"
+    ]
+  },
+  "player": {
+    "spawn": {
+      "x": 1,
+      "y": 1
+    },
+    "facing": "down"
+  },
+  "entities": [
+    {
+      "kind": "exit",
+      "id": "exit-1",
+      "x": 6,
+      "y": 6,
+      "label": "出口"
+    }
+  ],
+  "flags": {},
+  "rules": [],
+  "goal": {
+    "type": "at_exit"
+  },
+  "presentation": {
+    "theme": {
+      "background": "#0b1220",
+      "floor": "#1e293b",
+      "wall": "#475569",
+      "accent": "#fbbf24",
+      "text": "#e2e8f0"
+    },
+    "cellSize": 48,
+    "sounds": false,
+    "assets": []
+  },
+  "generation": {
+    "method": "handwritten",
+    "note": "空白骨架"
+  }
+}

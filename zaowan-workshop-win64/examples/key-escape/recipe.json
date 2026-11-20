@@ -1,0 +1,126 @@
+{
+  "schemaVersion": 1,
+  "pack": {
+    "id": "puzzle",
+    "version": 1
+  },
+  "meta": {
+    "name": "钥匙与出口",
+    "description": "在仓库里找到黄铜钥匙，打开卷帘门，走到出口。钥匙会被门消耗，但收集记录不会消失。",
+    "controls": "方向键/WASD 移动，E 开门，Space 等待，R 重开"
+  },
+  "board": {
+    "width": 10,
+    "height": 10,
+    "rows": [
+      "##########",
+      "#........#",
+      "#.####.#.#",
+      "#....#.#.#",
+      "#.##.#.#.#",
+      "#.#..#.#.#",
+      "#.#.##.#.#",
+      "#.#....#.#",
+      "#........#",
+      "##########"
+    ]
+  },
+  "player": {
+    "spawn": {
+      "x": 1,
+      "y": 1
+    },
+    "facing": "down"
+  },
+  "entities": [
+    {
+      "kind": "item",
+      "id": "key-1",
+      "x": 1,
+      "y": 8,
+      "itemType": "key",
+      "count": 1,
+      "label": "黄铜钥匙"
+    },
+    {
+      "kind": "door",
+      "id": "door-1",
+      "x": 4,
+      "y": 8,
+      "requires": {
+        "itemType": "key",
+        "count": 1
+      },
+      "label": "卷帘门"
+    },
+    {
+      "kind": "exit",
+      "id": "exit-1",
+      "x": 7,
+      "y": 8,
+      "label": "出口"
+    }
+  ],
+  "flags": {},
+  "rules": [
+    {
+      "id": "rule-key-msg",
+      "event": {
+        "type": "item_collected",
+        "entityId": "key-1"
+      },
+      "effects": [
+        {
+          "type": "show_message",
+          "text": "拾起黄铜钥匙（按 E 面向门开门）"
+        }
+      ]
+    },
+    {
+      "id": "rule-door-msg",
+      "event": {
+        "type": "action_resolved"
+      },
+      "when": {
+        "type": "inventory_at_least",
+        "itemType": "key",
+        "count": 1
+      },
+      "effects": [
+        {
+          "type": "show_message",
+          "text": "钥匙还在手上，靠近门按 E"
+        }
+      ]
+    }
+  ],
+  "goal": {
+    "type": "all",
+    "of": [
+      {
+        "type": "at_exit"
+      },
+      {
+        "type": "collected_at_least",
+        "itemType": "key",
+        "count": 1
+      }
+    ]
+  },
+  "presentation": {
+    "theme": {
+      "background": "#0b1220",
+      "floor": "#1e293b",
+      "wall": "#475569",
+      "accent": "#fbbf24",
+      "text": "#e2e8f0"
+    },
+    "cellSize": 48,
+    "sounds": true,
+    "assets": []
+  },
+  "generation": {
+    "method": "handwritten",
+    "note": "随附样例，人工设计"
+  }
+}

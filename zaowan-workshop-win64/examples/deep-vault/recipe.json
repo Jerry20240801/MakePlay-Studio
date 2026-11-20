@@ -1,0 +1,164 @@
+{
+  "schemaVersion": 1,
+  "pack": {
+    "id": "puzzle",
+    "version": 1
+  },
+  "meta": {
+    "name": "深库三进",
+    "description": "19x9 库房分三段：先用一把钥匙开外门，在第二段找到第二把钥匙与液压开关，升起机关门进内库，再走两把钥匙的内门。比钥匙与出口长很多，且脚本自检可通关。",
+    "controls": "方向键/WASD 移动，E 拿钥匙/开门/扳开关，Space 等待，R 重开"
+  },
+  "board": {
+    "width": 19,
+    "height": 9,
+    "rows": [
+      "###################",
+      "#.....#.......#.#.#",
+      "#.#...#..#....#...#",
+      "#.....#....#..#.#.#",
+      "#.................#",
+      "#.....#.....#.#.#.#",
+      "#...#.#.#.....#.#.#",
+      "#.....#.......#.#.#",
+      "###################"
+    ]
+  },
+  "player": {
+    "spawn": {
+      "x": 1,
+      "y": 1
+    },
+    "facing": "right"
+  },
+  "entities": [
+    {
+      "kind": "item",
+      "id": "key-1",
+      "x": 3,
+      "y": 3,
+      "itemType": "key",
+      "count": 1,
+      "label": "铜钥匙"
+    },
+    {
+      "kind": "item",
+      "id": "key-2",
+      "x": 10,
+      "y": 6,
+      "itemType": "key",
+      "count": 1,
+      "label": "铁钥匙"
+    },
+    {
+      "kind": "door",
+      "id": "door-1",
+      "x": 6,
+      "y": 4,
+      "requires": {
+        "itemType": "key",
+        "count": 1
+      },
+      "label": "外库门"
+    },
+    {
+      "kind": "switch",
+      "id": "switch-1",
+      "x": 12,
+      "y": 1,
+      "flag": "gateOpen",
+      "mode": "set",
+      "label": "液压开关"
+    },
+    {
+      "kind": "gate",
+      "id": "gate-1",
+      "x": 14,
+      "y": 4,
+      "openWhen": {
+        "type": "flag_is",
+        "flag": "gateOpen",
+        "value": true
+      },
+      "label": "机关门"
+    },
+    {
+      "kind": "door",
+      "id": "door-2",
+      "x": 16,
+      "y": 2,
+      "requires": {
+        "itemType": "key",
+        "count": 2
+      },
+      "label": "内库门"
+    },
+    {
+      "kind": "item",
+      "id": "gem-1",
+      "x": 17,
+      "y": 5,
+      "itemType": "gem",
+      "count": 1,
+      "label": "库房宝石"
+    },
+    {
+      "kind": "exit",
+      "id": "exit-1",
+      "x": 15,
+      "y": 7,
+      "label": "出口"
+    }
+  ],
+  "flags": {
+    "gateOpen": false
+  },
+  "rules": [
+    {
+      "id": "rule-hint",
+      "event": {
+        "type": "action_resolved"
+      },
+      "when": {
+        "type": "inventory_at_least",
+        "itemType": "key",
+        "count": 2
+      },
+      "effects": [
+        {
+          "type": "show_message",
+          "text": "两把钥匙都在手上，去开内库门"
+        }
+      ]
+    }
+  ],
+  "goal": {
+    "type": "all",
+    "of": [
+      {
+        "type": "at_exit"
+      },
+      {
+        "type": "collected_at_least",
+        "itemType": "key",
+        "count": 2
+      }
+    ]
+  },
+  "presentation": {
+    "theme": {
+      "background": "#0b1220",
+      "floor": "#1e293b",
+      "wall": "#475569",
+      "accent": "#fbbf24",
+      "text": "#e2e8f0"
+    },
+    "cellSize": 40,
+    "sounds": true,
+    "assets": []
+  },
+  "generation": {
+    "method": "handwritten",
+    "note": "加长样例，脚本 BFS 自检可通关"
+  }
+}

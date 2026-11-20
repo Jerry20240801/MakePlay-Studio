@@ -1,0 +1,44 @@
+{
+  "ranAt": "2026-11-15T02:59:59.335Z",
+  "fixture": "tests/fixtures/key-behind-door.json",
+  "repeats": 3,
+  "arms": [
+    {
+      "arm": "algorithm-first",
+      "modelRequests": 0,
+      "lintFindings": 1,
+      "quickFixApplied": 1,
+      "verifyStatus": "passed",
+      "wallMs": 104,
+      "projectId": "16e466c5-1f1a-4391-92a1-88144de4df12"
+    },
+    {
+      "arm": "algorithm-first",
+      "modelRequests": 0,
+      "lintFindings": 1,
+      "quickFixApplied": 1,
+      "verifyStatus": "passed",
+      "wallMs": 92,
+      "projectId": "344c258c-7d16-4cbc-b62f-8c95aab7d125"
+    },
+    {
+      "arm": "algorithm-first",
+      "modelRequests": 0,
+      "lintFindings": 1,
+      "quickFixApplied": 1,
+      "verifyStatus": "passed",
+      "wallMs": 96,
+      "projectId": "76b24eed-b196-4829-9e34-c63a052af8b9"
+    },
+    {
+      "arm": "pure-ai",
+      "status": "ran",
+      "runStatus": "ready_for_review",
+      "modelRequests": 8,
+      "verifyStatus": "passed",
+      "wallMs": 122786,
+      "projectId": "328a57dd-3278-4f9b-94ec-d0d7157bbda8",
+      "runId": "run-8e6a72eb"
+    }
+  ]
+}

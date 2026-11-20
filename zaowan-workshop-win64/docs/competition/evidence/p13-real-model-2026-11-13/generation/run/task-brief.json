@@ -1,0 +1,39 @@
+{
+  "compilerVersion": 1,
+  "id": "brief-f3af0d67fe",
+  "kind": "initial_generation",
+  "rawText": "做一个钥匙门解谜小游戏：玩家从左上角出发，找到钥匙打开门，走到出口；不要做第二关。",
+  "goal": "做一个钥匙门解谜小游戏：玩家从左上角出发，找到钥匙打开门，走到出口；不要做第二关。",
+  "packId": "puzzle",
+  "baseVersionId": "v1",
+  "threadId": "thread-bfd36f4a",
+  "parentRunId": null,
+  "issueId": null,
+  "targetRefs": [],
+  "protectedContracts": [],
+  "allowedOps": [
+    "set_tile",
+    "move_entity",
+    "add_entity",
+    "update_entity",
+    "remove_entity",
+    "add_rule",
+    "update_rule",
+    "remove_rule",
+    "update_goal",
+    "update_presentation",
+    "set_player_spawn",
+    "update_meta"
+  ],
+  "evidenceRefs": {},
+  "userConstraints": [
+    "不要做第二关"
+  ],
+  "acceptance": [
+    "生成一个可试玩的第一版（必须有非空配方改动）",
+    "结构检查与已确认创作底线通过",
+    "能力不足的部分在总结里明确说明，不得省略"
+  ],
+  "support": "supported",
+  "supportNote": "会在当前最小骨架上生成第一版；只允许受约束的玩法配方操作，不会执行任意代码。"
+}

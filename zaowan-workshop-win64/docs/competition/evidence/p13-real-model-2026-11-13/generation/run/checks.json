@@ -1,0 +1,30 @@
+[
+  {
+    "id": "structure",
+    "title": "Schema 与配方语义",
+    "kind": "auto",
+    "status": "passed",
+    "detail": "字段、上限、引用与结构检查通过"
+  },
+  {
+    "id": "determinism",
+    "title": "纯函数确定性",
+    "kind": "auto",
+    "status": "passed",
+    "detail": "相同配方与动作产生相同结果，输入状态未被修改"
+  },
+  {
+    "id": "initial_state",
+    "title": "初始状态合法性",
+    "kind": "auto",
+    "status": "passed",
+    "detail": "初始状态可玩"
+  },
+  {
+    "id": "reachable_goal",
+    "title": "通关路线搜索",
+    "kind": "auto",
+    "status": "passed",
+    "detail": "找到 19 步路线（141 个状态）"
+  }
+]

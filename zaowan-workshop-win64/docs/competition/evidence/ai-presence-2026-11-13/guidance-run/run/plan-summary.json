@@ -1,0 +1,17 @@
+{
+  "runId": "run-e7ada85e",
+  "mode": "model",
+  "status": "ready_for_review",
+  "baseVersionId": "v2",
+  "candidateVersionId": "v4",
+  "modelResponses": 7,
+  "toolCalls": 7,
+  "repairs": 0,
+  "narratedSteps": 7,
+  "silentSteps": 0,
+  "explanationCoverage": 1,
+  "concerns": {},
+  "guidanceCount": 1,
+  "durationMs": 21190,
+  "demo": false
+}

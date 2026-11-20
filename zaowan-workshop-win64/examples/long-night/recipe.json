@@ -1,0 +1,342 @@
+{
+  "schemaVersion": 1,
+  "pack": {
+    "id": "dialogue",
+    "version": 1
+  },
+  "meta": {
+    "name": "长夜渡轮",
+    "description": "比末班车更长的分支故事：16 个节点、4 个标记、4 个结局。硬币、航行日志和是否帮忙会改变能走的路线。",
+    "controls": "Enter/空格推进，数字键 1-4 选择，R 重开"
+  },
+  "dialogue": {
+    "startNodeId": "n-start",
+    "maxSteps": 90,
+    "flags": [
+      {
+        "id": "coin",
+        "initial": false
+      },
+      {
+        "id": "log",
+        "initial": false
+      },
+      {
+        "id": "help",
+        "initial": false
+      },
+      {
+        "id": "patient",
+        "initial": false
+      }
+    ],
+    "nodes": [
+      {
+        "id": "n-start",
+        "speaker": "旁白",
+        "text": "末班渡轮离港前十分钟，甲板上只剩你和一台自动售货机。",
+        "reviewed": true,
+        "choices": [
+          {
+            "id": "c-deck",
+            "text": "走到船尾看灯",
+            "goto": "n-deck"
+          },
+          {
+            "id": "c-cabin",
+            "text": "进客舱找位置",
+            "goto": "n-cabin"
+          },
+          {
+            "id": "c-machine",
+            "text": "在售货机前翻口袋",
+            "set": [
+              "coin"
+            ],
+            "goto": "n-machine"
+          }
+        ]
+      },
+      {
+        "id": "n-deck",
+        "speaker": "旁白",
+        "text": "船尾的风把汽笛吹得断断续续，灯塔在雾里转。",
+        "reviewed": true,
+        "choices": [
+          {
+            "id": "c-bridge",
+            "text": "沿甲板走到驾驶舱外",
+            "goto": "n-bridge"
+          },
+          {
+            "id": "c-center",
+            "text": "回到甲板中央",
+            "goto": "n-center"
+          }
+        ]
+      },
+      {
+        "id": "n-cabin",
+        "speaker": "广播",
+        "text": "广播：请乘客不要离座，本船两小时后靠岸。",
+        "reviewed": true,
+        "choices": [
+          {
+            "id": "c-seat",
+            "text": "坐下听完整段广播",
+            "set": [
+              "patient"
+            ],
+            "goto": "n-seat"
+          },
+          {
+            "id": "c-out",
+            "text": "出去透透气",
+            "goto": "n-center"
+          }
+        ]
+      },
+      {
+        "id": "n-machine",
+        "speaker": "旁白",
+        "text": "你摸到一枚硬币，售货机里的热可可还在冒气。",
+        "reviewed": true,
+        "goto": "n-center"
+      },
+      {
+        "id": "n-center",
+        "speaker": "旁白",
+        "text": "长椅上放着别人落下的一本航行日志。",
+        "reviewed": true,
+        "choices": [
+          {
+            "id": "c-log",
+            "text": "翻开航行日志",
+            "set": [
+              "log"
+            ],
+            "goto": "n-log"
+          },
+          {
+            "id": "c-to-bridge",
+            "text": "去驾驶舱外看看",
+            "goto": "n-bridge"
+          },
+          {
+            "id": "c-cocoa",
+            "text": "买一杯热可可",
+            "require": [
+              {
+                "type": "flag_is",
+                "flag": "coin",
+                "value": true
+              }
+            ],
+            "goto": "n-cocoa"
+          }
+        ]
+      },
+      {
+        "id": "n-log",
+        "speaker": "航行日志",
+        "text": "最后一页写着：如果灯塔熄灭，请在三点钟方向下锚。",
+        "reviewed": true,
+        "choices": [
+          {
+            "id": "c-keep",
+            "text": "合上日志，记住这句话",
+            "goto": "n-watch"
+          },
+          {
+            "id": "c-leave-log",
+            "text": "把日志塞回长椅",
+            "goto": "n-watch"
+          }
+        ]
+      },
+      {
+        "id": "n-cocoa",
+        "speaker": "旁白",
+        "text": "纸杯很烫，你捧在手里，雾好像没那么冷了。",
+        "reviewed": true,
+        "goto": "n-watch"
+      },
+      {
+        "id": "n-bridge",
+        "speaker": "水手",
+        "text": "水手探头说：灯塔刚才闪了两下，可能坏了。",
+        "reviewed": true,
+        "choices": [
+          {
+            "id": "c-help",
+            "text": "问要不要帮忙",
+            "set": [
+              "help"
+            ],
+            "goto": "n-help"
+          },
+          {
+            "id": "c-nod",
+            "text": "点点头，回甲板",
+            "goto": "n-watch"
+          }
+        ]
+      },
+      {
+        "id": "n-help",
+        "speaker": "水手",
+        "text": "他递来一支手电：你照住舷梯，我去查线路。",
+        "reviewed": true,
+        "goto": "n-ladder"
+      },
+      {
+        "id": "n-seat",
+        "speaker": "旁白",
+        "text": "你听完两段一样的广播，窗外有光闪了两下。",
+        "reviewed": true,
+        "goto": "n-watch"
+      },
+      {
+        "id": "n-watch",
+        "speaker": "旁白",
+        "text": "你回到栏杆边，灯塔又闪了一下，比刚才更暗。",
+        "reviewed": true,
+        "choices": [
+          {
+            "id": "c-anchor",
+            "text": "提醒船员下锚",
+            "require": [
+              {
+                "type": "flag_is",
+                "flag": "log",
+                "value": true
+              }
+            ],
+            "goto": "n-anchor"
+          },
+          {
+            "id": "c-ladder",
+            "text": "从舷梯去看灯塔",
+            "goto": "n-ladder"
+          },
+          {
+            "id": "c-wait",
+            "text": "什么也不做，等靠岸",
+            "goto": "n-arrive"
+          }
+        ]
+      },
+      {
+        "id": "n-anchor",
+        "speaker": "船长",
+        "text": "船长听完，让人把锚抛了下去，雾里传来三声汽笛。",
+        "reviewed": true,
+        "goto": "n-dawn"
+      },
+      {
+        "id": "n-ladder",
+        "speaker": "旁白",
+        "text": "舷梯很窄，手电的光在浪上一跳一跳。",
+        "reviewed": true,
+        "choices": [
+          {
+            "id": "c-light",
+            "text": "照住水手的脚",
+            "require": [
+              {
+                "type": "flag_is",
+                "flag": "help",
+                "value": true
+              }
+            ],
+            "goto": "n-fix"
+          },
+          {
+            "id": "c-retreat",
+            "text": "退回甲板",
+            "goto": "n-arrive"
+          }
+        ]
+      },
+      {
+        "id": "n-fix",
+        "speaker": "水手",
+        "text": "线路接上，灯塔重新亮起来，他冲你比了个手势。",
+        "reviewed": true,
+        "goto": "n-dawn"
+      },
+      {
+        "id": "n-arrive",
+        "speaker": "旁白",
+        "text": "渡轮靠岸时天还没亮，你跟着人群走下舷梯。",
+        "reviewed": true
+      },
+      {
+        "id": "n-dawn",
+        "speaker": "旁白",
+        "text": "天亮得很快，你回头看，灯塔的光还没灭。",
+        "reviewed": true
+      }
+    ],
+    "endings": [
+      {
+        "id": "ending-lamp",
+        "title": "灯又亮了",
+        "require": [
+          {
+            "type": "flag_is",
+            "flag": "help",
+            "value": true
+          }
+        ],
+        "text": "你照住舷梯，水手接上线路，灯塔重新亮了。"
+      },
+      {
+        "id": "ending-dawn",
+        "title": "天亮之前",
+        "require": [
+          {
+            "type": "flag_is",
+            "flag": "log",
+            "value": true
+          }
+        ],
+        "text": "你因为一行日志提醒了船长，天没黑透。"
+      },
+      {
+        "id": "ending-warm",
+        "title": "听完广播",
+        "require": [
+          {
+            "type": "flag_is",
+            "flag": "patient",
+            "value": true
+          }
+        ],
+        "text": "你在客舱听完整段广播，靠岸时天还没亮。"
+      },
+      {
+        "id": "ending-arrive",
+        "title": "沉默靠岸",
+        "require": [],
+        "text": "你什么也没做，只是把这一夜熬了过去。"
+      }
+    ]
+  },
+  "presentation": {
+    "theme": {
+      "background": "#111827",
+      "floor": "#1f2937",
+      "wall": "#4b5563",
+      "accent": "#fbbf24",
+      "text": "#e5e7eb"
+    },
+    "cellSize": 48,
+    "sounds": true,
+    "assets": []
+  },
+  "generation": {
+    "method": "handwritten",
+    "note": "加长样例，脚本自检无死路"
+  }
+}

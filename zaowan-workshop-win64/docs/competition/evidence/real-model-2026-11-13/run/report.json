@@ -1,0 +1,234 @@
+{
+  "packId": "puzzle",
+  "status": "passed",
+  "recipeHash": "f46a8b43c2a8eee5f41bbf5c6e0efd1c48440a1813ad0383195592dfeff304c0",
+  "contractHash": "d2278919a4e77786c51562809c45f46ad32bec3a9aea106638bc8fe6d2936a5a",
+  "buildId": "8528d8988197e1b13025cc15ec9e1493551543e53f6d85362553f5909068f474",
+  "verificationId": "53f6e21cc16d7fe447edcc37776dec9974d118b80bbf07a31df11a36cf40b112",
+  "engineVersion": "0.1.0",
+  "schemaVersion": 1,
+  "checks": [
+    {
+      "id": "structure",
+      "title": "Schema 与配方语义",
+      "kind": "auto",
+      "status": "passed",
+      "detail": "字段、上限、引用与结构检查通过"
+    },
+    {
+      "id": "determinism",
+      "title": "纯函数确定性",
+      "kind": "auto",
+      "status": "passed",
+      "detail": "相同配方与动作产生相同结果，输入状态未被修改"
+    },
+    {
+      "id": "initial_state",
+      "title": "初始状态合法性",
+      "kind": "auto",
+      "status": "passed",
+      "detail": "初始状态可玩"
+    },
+    {
+      "id": "reachable_goal",
+      "title": "通关路线搜索",
+      "kind": "auto",
+      "status": "passed",
+      "detail": "找到 14 步路线（204 个状态）"
+    },
+    {
+      "id": "contract:c-door",
+      "title": "契约 · 卷帘门必须用 1 把黄铜钥匙打开",
+      "kind": "auto",
+      "status": "passed",
+      "detail": "门 door-1 需要 1 个 key",
+      "evidence": [
+        "contracts#c-door"
+      ]
+    },
+    {
+      "id": "contract:c-exists",
+      "title": "契约 · 卷帘门不能被删除",
+      "kind": "auto",
+      "status": "passed",
+      "detail": "对象 door-1 仍然存在且类型为 door",
+      "evidence": [
+        "contracts#c-exists"
+      ]
+    },
+    {
+      "id": "contract:c-goal",
+      "title": "契约 · 胜利必须要求收集钥匙",
+      "kind": "auto",
+      "status": "passed",
+      "detail": "胜利条件在结构上必然要求收集 key",
+      "evidence": [
+        "contracts#c-goal"
+      ]
+    },
+    {
+      "id": "contract:c-reach",
+      "title": "契约 · 必须存在真实可通关路线",
+      "kind": "auto",
+      "status": "passed",
+      "detail": "搜索通过 14 步，且浏览器真实输入重放已绑定（run-d0ee0dfb）",
+      "evidence": [
+        "contracts#c-reach"
+      ]
+    }
+  ],
+  "contracts": [
+    {
+      "entryId": "c-door",
+      "kind": "door_requires_item",
+      "description": "卷帘门必须用 1 把黄铜钥匙打开",
+      "status": "passed",
+      "detail": "门 door-1 需要 1 个 key"
+    },
+    {
+      "entryId": "c-exists",
+      "kind": "required_entity_exists",
+      "description": "卷帘门不能被删除",
+      "status": "passed",
+      "detail": "对象 door-1 仍然存在且类型为 door"
+    },
+    {
+      "entryId": "c-goal",
+      "kind": "goal_requires_collection",
+      "description": "胜利必须要求收集钥匙",
+      "status": "passed",
+      "detail": "胜利条件在结构上必然要求收集 key"
+    },
+    {
+      "entryId": "c-reach",
+      "kind": "reachable_goal",
+      "description": "必须存在真实可通关路线",
+      "status": "passed",
+      "detail": "搜索通过 14 步，且浏览器真实输入重放已绑定（run-d0ee0dfb）"
+    }
+  ],
+  "search": {
+    "status": "found",
+    "actions": [
+      {
+        "type": "move",
+        "direction": "right"
+      },
+      {
+        "type": "move",
+        "direction": "right"
+      },
+      {
+        "type": "move",
+        "direction": "right"
+      },
+      {
+        "type": "move",
+        "direction": "right"
+      },
+      {
+        "type": "move",
+        "direction": "right"
+      },
+      {
+        "type": "move",
+        "direction": "right"
+      },
+      {
+        "type": "move",
+        "direction": "right"
+      },
+      {
+        "type": "move",
+        "direction": "down"
+      },
+      {
+        "type": "move",
+        "direction": "down"
+      },
+      {
+        "type": "move",
+        "direction": "down"
+      },
+      {
+        "type": "move",
+        "direction": "down"
+      },
+      {
+        "type": "move",
+        "direction": "down"
+      },
+      {
+        "type": "move",
+        "direction": "down"
+      },
+      {
+        "type": "move",
+        "direction": "down"
+      }
+    ],
+    "statesVisited": 204,
+    "depth": 14,
+    "elapsedMs": 9
+  },
+  "replay": [
+    {
+      "type": "move",
+      "direction": "right"
+    },
+    {
+      "type": "move",
+      "direction": "right"
+    },
+    {
+      "type": "move",
+      "direction": "right"
+    },
+    {
+      "type": "move",
+      "direction": "right"
+    },
+    {
+      "type": "move",
+      "direction": "right"
+    },
+    {
+      "type": "move",
+      "direction": "right"
+    },
+    {
+      "type": "move",
+      "direction": "right"
+    },
+    {
+      "type": "move",
+      "direction": "down"
+    },
+    {
+      "type": "move",
+      "direction": "down"
+    },
+    {
+      "type": "move",
+      "direction": "down"
+    },
+    {
+      "type": "move",
+      "direction": "down"
+    },
+    {
+      "type": "move",
+      "direction": "down"
+    },
+    {
+      "type": "move",
+      "direction": "down"
+    },
+    {
+      "type": "move",
+      "direction": "down"
+    }
+  ],
+  "errors": [],
+  "createdAt": "2026-11-13T00:42:02.782Z"
+}

@@ -1,0 +1,11 @@
+{
+  "runId": "run-d0ee0dfb",
+  "mode": "model",
+  "status": "ready_for_review",
+  "baseVersionId": "v2",
+  "candidateVersionId": "v3",
+  "modelResponses": 6,
+  "toolCalls": 6,
+  "repairs": 0,
+  "demo": false
+}

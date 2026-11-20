@@ -1,0 +1,12 @@
+<!doctype html><meta charset="utf-8"><title>视觉小说对话框</title><link rel="stylesheet" href="_base.css"><style>
+.bg{position:absolute;inset:0;background:linear-gradient(180deg,#0f1b3d 0%,#1e2a55 55%,#2b2440 100%)}
+.lamp{position:absolute;top:120px;width:14px;height:420px;background:#3b4566}.lamp::after{content:"";position:absolute;top:-30px;left:-23px;width:60px;height:60px;border-radius:50%;background:radial-gradient(#fde68a,#fde68a00 70%)}
+.rail{position:absolute;bottom:300px;left:0;right:0;height:10px;background:#475569}.rail.b{bottom:270px}
+.portrait{position:absolute;right:220px;bottom:250px;width:300px;height:560px;border-radius:150px 150px 30px 30px;background:linear-gradient(#f1c7a8 0 26%,#334155 26% 100%);opacity:.95}
+.box{position:absolute;left:80px;right:80px;bottom:60px;height:240px;border-radius:18px;background:rgba(10,14,30,.78);border:1px solid rgba(255,255,255,.18);padding:56px 48px 0}
+.name{position:absolute;top:-26px;left:36px;padding:10px 28px;border-radius:12px;background:#6366f1;font-size:30px;font-weight:700}
+.line{font-size:36px;line-height:1.6}.caret{display:inline-block;width:3px;height:36px;background:#e2e8f0;vertical-align:middle;animation:b 1s steps(1) infinite}@keyframes b{50%{opacity:0}}
+.hint{position:absolute;right:36px;bottom:24px;font-size:22px;color:#94a3b8}
+</style><div class="bg"></div><div class="lamp" style="left:240px"></div><div class="lamp" style="left:760px"></div><div class="rail"></div><div class="rail b"></div><div class="portrait"></div>
+<div class="box"><div class="name">列车员</div><p class="line">这趟车不回头。你要去哪一站<span class="caret"></span></p><div class="hint">点击显示整句 ▸ 再点击继续</div></div>
+<script src="_fit.js"></script>

@@ -1,0 +1,83 @@
+{
+  "ok": true,
+  "code": "OK",
+  "message": "浏览器真实键盘输入完成通关",
+  "trace": [
+    {
+      "action": "move:down",
+      "index": 1,
+      "ok": true
+    },
+    {
+      "action": "move:down",
+      "index": 2,
+      "ok": true
+    },
+    {
+      "action": "move:down",
+      "index": 3,
+      "ok": true
+    },
+    {
+      "action": "move:down",
+      "index": 4,
+      "ok": true
+    },
+    {
+      "action": "move:down",
+      "index": 5,
+      "ok": true
+    },
+    {
+      "action": "move:down",
+      "index": 6,
+      "ok": true
+    },
+    {
+      "action": "move:down",
+      "index": 7,
+      "ok": true
+    },
+    {
+      "action": "move:right",
+      "index": 8,
+      "ok": true
+    },
+    {
+      "action": "move:right",
+      "index": 9,
+      "ok": true
+    },
+    {
+      "action": "move:right",
+      "index": 10,
+      "ok": true
+    },
+    {
+      "action": "move:right",
+      "index": 11,
+      "ok": true
+    },
+    {
+      "action": "move:right",
+      "index": 12,
+      "ok": true
+    },
+    {
+      "action": "move:right",
+      "index": 13,
+      "ok": true
+    },
+    {
+      "action": "move:right",
+      "index": 14,
+      "ok": true
+    }
+  ],
+  "consoleErrors": [],
+  "screenshots": [
+    "C:\\Users\\czj\\AppData\\Local\\Temp\\zaowan-guidance-live-mgdyAP\\data\\projects\\9ba53197-6826-4ad3-8019-15696d4139ff\\runs\\run-e7ada85e\\screenshots\\grid-final.png"
+  ],
+  "finalStatus": "won",
+  "browserMode": "cdp"
+}

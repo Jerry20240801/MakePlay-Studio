@@ -1,0 +1,154 @@
+{
+  "schemaVersion": 1,
+  "pack": {
+    "id": "puzzle",
+    "version": 1
+  },
+  "meta": {
+    "name": "机关实验室",
+    "description": "扳动开关让机关门升起，收集实验晶体，再抵达出口。机关门与开关的依赖关系写在规则里。",
+    "controls": "方向键/WASD 移动，E 操作开关/开门，Space 等待，R 重开"
+  },
+  "board": {
+    "width": 12,
+    "height": 10,
+    "rows": [
+      "############",
+      "#...#......#",
+      "#...#.####.#",
+      "#...#....#.#",
+      "#...#.##.#.#",
+      "#...#.#..#.#",
+      "#.###.#.##.#",
+      "#.....#....#",
+      "#..........#",
+      "############"
+    ]
+  },
+  "player": {
+    "spawn": {
+      "x": 1,
+      "y": 1
+    },
+    "facing": "right"
+  },
+  "entities": [
+    {
+      "kind": "switch",
+      "id": "switch-1",
+      "x": 2,
+      "y": 4,
+      "flag": "gateOpen",
+      "mode": "set",
+      "label": "闸刀开关"
+    },
+    {
+      "kind": "gate",
+      "id": "gate-1",
+      "x": 4,
+      "y": 8,
+      "openWhen": {
+        "type": "flag_is",
+        "flag": "gateOpen",
+        "value": true
+      },
+      "label": "机关门"
+    },
+    {
+      "kind": "item",
+      "id": "gem-1",
+      "x": 1,
+      "y": 8,
+      "itemType": "gem",
+      "count": 1,
+      "label": "实验晶体"
+    },
+    {
+      "kind": "exit",
+      "id": "exit-1",
+      "x": 9,
+      "y": 8,
+      "label": "出口"
+    },
+    {
+      "kind": "zone",
+      "id": "lab-zone",
+      "cells": [
+        {
+          "x": 5,
+          "y": 8
+        },
+        {
+          "x": 6,
+          "y": 8
+        }
+      ],
+      "label": "实验区"
+    }
+  ],
+  "flags": {
+    "gateOpen": false
+  },
+  "rules": [
+    {
+      "id": "rule-switch-msg",
+      "event": {
+        "type": "switch_activated",
+        "entityId": "switch-1"
+      },
+      "effects": [
+        {
+          "type": "show_message",
+          "text": "开关合上，机关门升起"
+        }
+      ]
+    },
+    {
+      "id": "rule-zone-msg",
+      "event": {
+        "type": "player_entered_zone",
+        "zoneId": "lab-zone"
+      },
+      "effects": [
+        {
+          "type": "show_message",
+          "text": "进入实验区"
+        }
+      ]
+    }
+  ],
+  "goal": {
+    "type": "all",
+    "of": [
+      {
+        "type": "at_exit"
+      },
+      {
+        "type": "collected_at_least",
+        "itemType": "gem",
+        "count": 1
+      },
+      {
+        "type": "flag_is",
+        "flag": "gateOpen",
+        "value": true
+      }
+    ]
+  },
+  "presentation": {
+    "theme": {
+      "background": "#0b1220",
+      "floor": "#1e293b",
+      "wall": "#475569",
+      "accent": "#fbbf24",
+      "text": "#e2e8f0"
+    },
+    "cellSize": 48,
+    "sounds": true,
+    "assets": []
+  },
+  "generation": {
+    "method": "handwritten",
+    "note": "随附样例，人工设计"
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "steps": [
+    {
+      "id": "s1",
+      "goal": "定位不可通关的根因",
+      "doneWhen": "基线 run_rule_checks 显示 structure/determinism/initial_state 通过，仅 reachable_goal 与 contract:c-reach 失败，并定位到内屋唯一出口被 door-1 封堵。",
+      "checkIds": []
+    },
+    {
+      "id": "s2",
+      "goal": "把黄铜钥匙 key-1 移到卷帘门之外的可到达格",
+      "doneWhen": "三条底线检查全部 passed，door-1 未被删除、仍要求 1 把 key，胜利条件仍要求收集钥匙。",
+      "checkIds": [
+        "contract:c-door",
+        "contract:c-exists",
+        "contract:c-goal"
+      ]
+    },
+    {
+      "id": "s3",
+      "goal": "恢复真实可通关路线",
+      "doneWhen": "reachable_goal 与 contract:c-reach 均 passed，状态搜索找到拾钥匙后到达出口的路线。",
+      "checkIds": [
+        "reachable_goal",
+        "contract:c-reach"
+      ]
+    },
+    {
+      "id": "s4",
+      "goal": "确认修改没有破坏结构与确定性",
+      "doneWhen": "validate_recipe 通过，且 structure/determinism/initial_state 三项保持 passed。",
+      "checkIds": [
+        "structure",
+        "determinism",
+        "initial_state"
+      ]
+    },
+    {
+      "id": "s5",
+      "goal": "隔离浏览器试玩重放验证",
+      "doneWhen": "run_browser_playtest 用真实键盘输入重放通关路线并给出通过证据（非 partial）。",
+      "checkIds": []
+    }
+  ],
+  "progress": [
+    {
+      "id": "s1",
+      "status": "manual"
+    },
+    {
+      "id": "s2",
+      "status": "passed"
+    },
+    {
+      "id": "s3",
+      "status": "passed"
+    },
+    {
+      "id": "s4",
+      "status": "passed"
+    },
+    {
+      "id": "s5",
+      "status": "manual"
+    }
+  ]
+}

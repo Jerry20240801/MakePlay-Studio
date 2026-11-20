@@ -1,0 +1,329 @@
+{
+  "ranAt": "2026-11-15T14:25:53.190Z",
+  "baseUrl": null,
+  "models": [],
+  "repeats": 3,
+  "maxRequests": 12,
+  "instruction": "验证没有通过，这关现在通关不了，请帮我修到能通关。不要删除门和出口，胜利条件不要改。",
+  "cases": [
+    "01-key-behind-door",
+    "02-door-item-missing",
+    "03-gate-no-switch",
+    "04-exit-sealed",
+    "05-compound"
+  ],
+  "trials": [
+    {
+      "case": "01-key-behind-door",
+      "arm": "algorithm",
+      "model": null,
+      "rep": 1,
+      "projectId": "cb907de6-7c39-4fad-80b3-42277508f268",
+      "solved": true,
+      "verifyStatus": "passed",
+      "failedChecks": [],
+      "quickFixes": [
+        "grid/key-behind-door"
+      ],
+      "modelRequests": 0,
+      "tokens": 0,
+      "wallMs": 165
+    },
+    {
+      "case": "01-key-behind-door",
+      "arm": "algorithm",
+      "model": null,
+      "rep": 2,
+      "projectId": "995f9d00-d5a4-4369-87cf-c20de211beec",
+      "solved": true,
+      "verifyStatus": "passed",
+      "failedChecks": [],
+      "quickFixes": [
+        "grid/key-behind-door"
+      ],
+      "modelRequests": 0,
+      "tokens": 0,
+      "wallMs": 179
+    },
+    {
+      "case": "01-key-behind-door",
+      "arm": "algorithm",
+      "model": null,
+      "rep": 3,
+      "projectId": "8e5bdce6-e2ab-4816-a3a6-9cace2f031b0",
+      "solved": true,
+      "verifyStatus": "passed",
+      "failedChecks": [],
+      "quickFixes": [
+        "grid/key-behind-door"
+      ],
+      "modelRequests": 0,
+      "tokens": 0,
+      "wallMs": 251
+    },
+    {
+      "case": "02-door-item-missing",
+      "arm": "algorithm",
+      "model": null,
+      "rep": 1,
+      "projectId": "6c9fb129-4011-48ec-a61e-d4d56e47c11d",
+      "solved": true,
+      "verifyStatus": "passed",
+      "failedChecks": [],
+      "quickFixes": [
+        "grid/door-item-missing"
+      ],
+      "modelRequests": 0,
+      "tokens": 0,
+      "wallMs": 283
+    },
+    {
+      "case": "02-door-item-missing",
+      "arm": "algorithm",
+      "model": null,
+      "rep": 2,
+      "projectId": "881877c9-bc7d-4e5a-9566-d7b9fe7072b0",
+      "solved": true,
+      "verifyStatus": "passed",
+      "failedChecks": [],
+      "quickFixes": [
+        "grid/door-item-missing"
+      ],
+      "modelRequests": 0,
+      "tokens": 0,
+      "wallMs": 248
+    },
+    {
+      "case": "02-door-item-missing",
+      "arm": "algorithm",
+      "model": null,
+      "rep": 3,
+      "projectId": "7ba7ad63-63a0-4455-ad9a-575ee4392ee0",
+      "solved": true,
+      "verifyStatus": "passed",
+      "failedChecks": [],
+      "quickFixes": [
+        "grid/door-item-missing"
+      ],
+      "modelRequests": 0,
+      "tokens": 0,
+      "wallMs": 254
+    },
+    {
+      "case": "03-gate-no-switch",
+      "arm": "algorithm",
+      "model": null,
+      "rep": 1,
+      "projectId": "3f6714e9-6f07-4a6e-aba3-e159373cb392",
+      "solved": false,
+      "verifyStatus": "failed",
+      "failedChecks": [
+        "reachable_goal"
+      ],
+      "quickFixes": [],
+      "modelRequests": 0,
+      "tokens": 0,
+      "wallMs": 64
+    },
+    {
+      "case": "03-gate-no-switch",
+      "arm": "algorithm",
+      "model": null,
+      "rep": 2,
+      "projectId": "d393fecf-383d-45f8-9b7d-84eb0e3ea310",
+      "solved": false,
+      "verifyStatus": "failed",
+      "failedChecks": [
+        "reachable_goal"
+      ],
+      "quickFixes": [],
+      "modelRequests": 0,
+      "tokens": 0,
+      "wallMs": 67
+    },
+    {
+      "case": "03-gate-no-switch",
+      "arm": "algorithm",
+      "model": null,
+      "rep": 3,
+      "projectId": "857d6005-cf31-4dcf-ad03-31efaef2adc9",
+      "solved": false,
+      "verifyStatus": "failed",
+      "failedChecks": [
+        "reachable_goal"
+      ],
+      "quickFixes": [],
+      "modelRequests": 0,
+      "tokens": 0,
+      "wallMs": 64
+    },
+    {
+      "case": "04-exit-sealed",
+      "arm": "algorithm",
+      "model": null,
+      "rep": 1,
+      "projectId": "afa52f6b-bd2e-4f0e-9c4b-5d34b0934ada",
+      "solved": false,
+      "verifyStatus": "failed",
+      "failedChecks": [
+        "reachable_goal"
+      ],
+      "quickFixes": [],
+      "modelRequests": 0,
+      "tokens": 0,
+      "wallMs": 69
+    },
+    {
+      "case": "04-exit-sealed",
+      "arm": "algorithm",
+      "model": null,
+      "rep": 2,
+      "projectId": "9e3af4fa-aa15-4966-ac92-eaae04a939d0",
+      "solved": false,
+      "verifyStatus": "failed",
+      "failedChecks": [
+        "reachable_goal"
+      ],
+      "quickFixes": [],
+      "modelRequests": 0,
+      "tokens": 0,
+      "wallMs": 74
+    },
+    {
+      "case": "04-exit-sealed",
+      "arm": "algorithm",
+      "model": null,
+      "rep": 3,
+      "projectId": "0668c510-219f-4e0b-bdd2-370774b41dfa",
+      "solved": false,
+      "verifyStatus": "failed",
+      "failedChecks": [
+        "reachable_goal"
+      ],
+      "quickFixes": [],
+      "modelRequests": 0,
+      "tokens": 0,
+      "wallMs": 79
+    },
+    {
+      "case": "05-compound",
+      "arm": "algorithm",
+      "model": null,
+      "rep": 1,
+      "projectId": "ffd40713-fedd-4558-9c55-406c87101bd5",
+      "solved": false,
+      "verifyStatus": "failed",
+      "failedChecks": [
+        "reachable_goal"
+      ],
+      "quickFixes": [
+        "grid/door-item-missing",
+        "grid/key-behind-door"
+      ],
+      "modelRequests": 0,
+      "tokens": 0,
+      "wallMs": 485
+    },
+    {
+      "case": "05-compound",
+      "arm": "algorithm",
+      "model": null,
+      "rep": 2,
+      "projectId": "686c88b3-79f2-49e6-b8d7-4699d3933eb0",
+      "solved": false,
+      "verifyStatus": "failed",
+      "failedChecks": [
+        "reachable_goal"
+      ],
+      "quickFixes": [
+        "grid/door-item-missing",
+        "grid/key-behind-door"
+      ],
+      "modelRequests": 0,
+      "tokens": 0,
+      "wallMs": 465
+    },
+    {
+      "case": "05-compound",
+      "arm": "algorithm",
+      "model": null,
+      "rep": 3,
+      "projectId": "35a30a2f-43df-4c5e-bda4-2b73c55ce7ab",
+      "solved": false,
+      "verifyStatus": "failed",
+      "failedChecks": [
+        "reachable_goal"
+      ],
+      "quickFixes": [
+        "grid/door-item-missing",
+        "grid/key-behind-door"
+      ],
+      "modelRequests": 0,
+      "tokens": 0,
+      "wallMs": 459
+    }
+  ],
+  "skipped": [],
+  "summary": [
+    {
+      "case": "01-key-behind-door",
+      "arm": "algorithm",
+      "model": "—",
+      "n": 3,
+      "solved": 3,
+      "meanRequests": 0,
+      "meanTokens": 0,
+      "meanRepairs": null,
+      "withFeedbackFix": 0,
+      "meanSeconds": 0.2
+    },
+    {
+      "case": "02-door-item-missing",
+      "arm": "algorithm",
+      "model": "—",
+      "n": 3,
+      "solved": 3,
+      "meanRequests": 0,
+      "meanTokens": 0,
+      "meanRepairs": null,
+      "withFeedbackFix": 0,
+      "meanSeconds": 0.3
+    },
+    {
+      "case": "03-gate-no-switch",
+      "arm": "algorithm",
+      "model": "—",
+      "n": 3,
+      "solved": 0,
+      "meanRequests": 0,
+      "meanTokens": 0,
+      "meanRepairs": null,
+      "withFeedbackFix": 0,
+      "meanSeconds": 0.1
+    },
+    {
+      "case": "04-exit-sealed",
+      "arm": "algorithm",
+      "model": "—",
+      "n": 3,
+      "solved": 0,
+      "meanRequests": 0,
+      "meanTokens": 0,
+      "meanRepairs": null,
+      "withFeedbackFix": 0,
+      "meanSeconds": 0.1
+    },
+    {
+      "case": "05-compound",
+      "arm": "algorithm",
+      "model": "—",
+      "n": 3,
+      "solved": 0,
+      "meanRequests": 0,
+      "meanTokens": 0,
+      "meanRepairs": null,
+      "withFeedbackFix": 0,
+      "meanSeconds": 0.5
+    }
+  ]
+}
